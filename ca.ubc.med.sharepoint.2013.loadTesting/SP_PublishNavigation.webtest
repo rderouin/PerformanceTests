@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="SP_PublishNavigation" Id="ca15e095-37f6-4b61-a743-8d3b87771ced" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="False" Proxy="default" StopOnError="False" RecordedResultFile="SP_PublishNavigation.332f2336-3217-4ba5-8e75-f553255c34b3.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="acb2cafa-696c-4f15-819b-e0d939ec08c4" Version="1.1" Url="{{SP_WebServer}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{SP_WebServer}}/Pages/default.aspx" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="POST" Guid="5e641a9e-6a9a-41cf-ab42-448da9d52036" Version="1.1" Url="{{SP_WebServer}}/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+        <Header Name="soapaction" Value="{{WebServer3}}/sharepoint/soap/GetUpdatedFormDigest" />
+      </Headers>
+      <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="f63dbd08-79bc-4b3c-a1f0-66d35cbe6835" Version="1.1" Url="{{SP_WebServer}}/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="500cbaf0-7072-4a1c-9439-9c20e122ced2" Version="1.1" Url="{{SP_WebServer}}/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{SP_WebServer}}/Lists/How%20Tos/DispForm.aspx?ID=12&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="ListID2" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="pageListId:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="ExtractRandomMatch" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="SearchInHeaders" Value="False" />
+            <RuleParameter Name="ContextParameterName" Value="" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Use" Value="id" RecordedValue="id" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Action" Value="dispform" RecordedValue="dispform" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ItemId" Value="12" RecordedValue="12" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ListId" Value="30811ff7-9594-4854-9a14-b7c469816d8c" RecordedValue="30811ff7-9594-4854-9a14-b7c469816d8c" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="WebId" Value="3762a0e8-49eb-4eea-84b1-826f63656d5d" RecordedValue="3762a0e8-49eb-4eea-84b1-826f63656d5d" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="SiteId" Value="86bf3114-c8a0-409f-bb27-7eb0a735c9aa" RecordedValue="86bf3114-c8a0-409f-bb27-7eb0a735c9aa" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Zone" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Source" Value="{{WebServer2}}%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="e4cd4656-3b8d-406f-9ddf-33f249b78bc5" Version="1.1" Url="{{SP_WebServer}}/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+        <Header Name="soapaction" Value="{{WebServer3}}/sharepoint/soap/GetUpdatedFormDigest" />
+      </Headers>
+      <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="be21e095-eaeb-47a4-9f1f-3c96d6a9ec5e" Version="1.1" Url="{{SP_WebServer}}/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="68c3a207-2f46-4439-9249-720c5024eb7d" Version="1.1" Url="{{SP_WebServer}}/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{SP_WebServer}}/Lists/How%20Tos/DispForm.aspx?ID=11&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Use" Value="id" RecordedValue="id" CorrelationBinding="{{QueryStringParam14.Use}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Action" Value="dispform" RecordedValue="dispform" CorrelationBinding="{{QueryStringParam15.Action}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ItemId" Value="11" RecordedValue="11" CorrelationBinding="{{QueryStringParam16.ItemId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ListId" Value="{{ListID2}}" RecordedValue="30811ff7-9594-4854-9a14-b7c469816d8c" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="WebId" Value="3762a0e8-49eb-4eea-84b1-826f63656d5d" RecordedValue="3762a0e8-49eb-4eea-84b1-826f63656d5d" CorrelationBinding="{{QueryStringParam17.WebId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="SiteId" Value="86bf3114-c8a0-409f-bb27-7eb0a735c9aa" RecordedValue="86bf3114-c8a0-409f-bb27-7eb0a735c9aa" CorrelationBinding="{{QueryStringParam18.SiteId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Zone" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Source" Value="{{WebServer2}}%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="{{QueryStringParam19.Source}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="da6612cb-2f01-4356-aefb-8af29e9cf719" Version="1.1" Url="{{SP_WebServer}}/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+        <Header Name="soapaction" Value="{{WebServer3}}/sharepoint/soap/GetUpdatedFormDigest" />
+      </Headers>
+      <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="901774bb-ec83-4580-b607-9893e14e06b1" Version="1.1" Url="{{SP_WebServer}}/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="8834cc1b-fc72-4098-97cd-74aae33ece15" Version="1.1" Url="{{SP_WebServer}}/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{SP_WebServer}}/Lists/How%20Tos/DispForm.aspx?ID=5&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Use" Value="id" RecordedValue="id" CorrelationBinding="{{QueryStringParam8.Use}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Action" Value="dispform" RecordedValue="dispform" CorrelationBinding="{{QueryStringParam9.Action}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ItemId" Value="5" RecordedValue="5" CorrelationBinding="{{QueryStringParam10.ItemId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ListId" Value="{{ListID2}}" RecordedValue="30811ff7-9594-4854-9a14-b7c469816d8c" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="WebId" Value="3762a0e8-49eb-4eea-84b1-826f63656d5d" RecordedValue="3762a0e8-49eb-4eea-84b1-826f63656d5d" CorrelationBinding="{{QueryStringParam11.WebId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="SiteId" Value="86bf3114-c8a0-409f-bb27-7eb0a735c9aa" RecordedValue="86bf3114-c8a0-409f-bb27-7eb0a735c9aa" CorrelationBinding="{{QueryStringParam12.SiteId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Zone" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Source" Value="{{WebServer2}}%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="{{QueryStringParam13.Source}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="ab81b252-ee4b-40af-aa7d-baf8539209ec" Version="1.1" Url="{{SP_WebServer}}/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+        <Header Name="soapaction" Value="{{WebServer3}}/sharepoint/soap/GetUpdatedFormDigest" />
+      </Headers>
+      <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="de982f5e-35cb-46af-8d47-3bc24e4620a1" Version="1.1" Url="{{SP_WebServer}}/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="73b0a1a1-0f5c-468f-9975-12413d7943cb" Version="1.1" Url="{{SP_WebServer}}/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{SP_WebServer}}/{{SP_SiteName1}}/{{SP_SiteName2}}/{{SP_SiteName3}}/Lists/Posts/Post.aspx?List=d539f7b2%2Df6df%2D44c8%2Db37c%2D06381d0a5e8d&amp;ID=697&amp;RootFolder=%2F{{SP_SiteName1}}%2F{{SP_SiteName2}}%2F{{SP_SiteName3}}%2FLists%2FPosts&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx&amp;Web=0974a1af%2D167f%2D4bd5%2D814a%2Da3543d05da5b" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Use" Value="id" RecordedValue="id" CorrelationBinding="{{QueryStringParam1.Use}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Action" Value="dispform" RecordedValue="dispform" CorrelationBinding="{{QueryStringParam2.Action}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ItemId" Value="697" RecordedValue="697" CorrelationBinding="{{QueryStringParam3.ItemId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ListId" Value="d539f7b2-f6df-44c8-b37c-06381d0a5e8d" RecordedValue="d539f7b2-f6df-44c8-b37c-06381d0a5e8d" CorrelationBinding="{{QueryStringParam4.ListId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="WebId" Value="0974a1af-167f-4bd5-814a-a3543d05da5b" RecordedValue="0974a1af-167f-4bd5-814a-a3543d05da5b" CorrelationBinding="{{QueryStringParam5.WebId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="SiteId" Value="86bf3114-c8a0-409f-bb27-7eb0a735c9aa" RecordedValue="86bf3114-c8a0-409f-bb27-7eb0a735c9aa" CorrelationBinding="{{QueryStringParam6.SiteId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Zone" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Source" Value="{{WebServer2}}%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="{{QueryStringParam7.Source}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="1516c266-8588-4b62-b17d-e0134523ae46" Version="1.1" Url="{{SP_WebServer}}/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+        <Header Name="soapaction" Value="{{WebServer3}}/sharepoint/soap/GetUpdatedFormDigest" />
+      </Headers>
+      <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="7afac990-5534-4174-a32d-c3796decab32" Version="1.1" Url="{{SP_WebServer}}/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="7e1c0ae6-1b14-457e-890c-5703b84cf78e" Version="1.1" Url="{{SP_WebServer}}/{{SP_SiteName1}}/{{SP_SiteName2}}/{{SP_SiteName3}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{SP_WebServer}}/{{SP_SiteName1}}/{{SP_SiteName2}}/{{SP_SiteName3}}/Pages/default.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam9.__EVENTTARGET" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ID&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;}, n" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam10.__ASYNCPOST" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ode=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&lt;ie" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="a36cd4b7-cdc8-4129-babe-e4f91838d798" Version="1.1" Url="{{SP_WebServer}}/{{SP_SiteName1}}/{{SP_SiteName2}}/{{SP_SiteName3}}/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_WebServer}}/{{SP_SiteName1}}/{{SP_SiteName2}}/{{SP_SiteName3}}/Pages/default.aspx" />
+        <Header Name="soapaction" Value="{{WebServer3}}/sharepoint/soap/GetUpdatedFormDigest" />
+      </Headers>
+      <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="d7d6e9fb-8a1f-4a5b-86fc-397005a50fb0" Version="1.1" Url="{{SP_WebServer}}/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+        <Header Name="soapaction" Value="{{WebServer3}}/sharepoint/soap/GetUpdatedFormDigest" />
+      </Headers>
+      <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="eb727b57-d247-4bb7-912e-683220c05b84" Version="1.1" Url="{{SP_WebServer}}/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="e0533ec8-7092-4356-9225-5764713b8684" Version="1.1" Url="{{SP_WebServer}}/Lists/Tip%20of%20the%20Week/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="470f2be4-f0d7-4e45-930d-f15fd91300f5" Version="1.1" Url="{{SP_WebServer}}/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_WebServer}}/Pages/default.aspx" />
+        <Header Name="soapaction" Value="{{WebServer3}}/sharepoint/soap/GetUpdatedFormDigest" />
+      </Headers>
+      <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="dd794ee2-b7d3-4996-9c22-ca8a7bc165db" Version="1.1" Url="{{SP_WebServer}}/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <SharepointInformation SharepointVersion="SharePoint2013" HeuristicXmlEnabled="False" />
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="SP_SiteName1" Value="AboutUs" />
+    <ContextParameter Name="SP_SiteName2" Value="NewsAndEvents" />
+    <ContextParameter Name="SP_SiteName3" Value="Announcements" />
+    <ContextParameter Name="SP_WebServer" Value="https://mednet.med.ubc.ca" />
+    <ContextParameter Name="WebServer2" Value="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca" />
+    <ContextParameter Name="WebServer3" Value="http://schemas.microsoft.com" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.SharePointValidationRuleFindText2, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="SharePoint - Find Multiple Text Occurrences" Description="Similar to the Find Text validation rule but allows you to specify more than a single text string." Level="High" ExectuionOrder="BeforeDependents">
+      <RuleParameters>
+        <RuleParameter Name="ErrorTextPattern" Value="\[{&quot;Error&quot;:[^n];&quot;SharepointError&quot;;&quot;HasException&quot;:true" />
+        <RuleParameter Name="ErrorPassIfTextFound" Value="False" />
+        <RuleParameter Name="ErrorUseRegEx" Value="True" />
+        <RuleParameter Name="StopTestTextPattern" Value="" />
+        <RuleParameter Name="StopTestPassIfTextFound" Value="False" />
+        <RuleParameter Name="StopTestUseRegEx" Value="False" />
+        <RuleParameter Name="StringSeparator" Value=";" />
+        <RuleParameter Name="Enabled" Value="True" />
+      </RuleParameters>
+    </ValidationRule>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents">
+      <RuleParameters>
+        <RuleParameter Name="IgnoreCase" Value="True" />
+      </RuleParameters>
+    </ValidationRule>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>
