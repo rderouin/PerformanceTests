@@ -1,0 +1,1136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="SP13_DocumentOperations" Id="6e92b72c-db14-4eb4-8b6f-3110d4f294e8" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" DeploymentItemsEditable="Bi-Weekly Report Application Services 14-09-08.docx" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.8e2faad7-377b-4536-b05d-59a59171f9ce.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="27d723e6-7468-4464-8212-7936700ab850" Version="1.1" Url="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="POST" Guid="c0e92f3c-ad8a-4c0b-890b-1ed8b8d34243" Version="1.1" Url="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared%20Documents/Forms/AllItems.aspx" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <RequestPlugins>
+        <RequestPlugin Classname="Microsoft.VisualStudio.TestTools.WebTesting.RequestPlugins.SPLTPT_MTSL_ResolveNestedContextParms, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Resolve Nested Context Parameters" Description="Resolves nested context parameters.An example of this would be {{$HIDDEN.ListSchema_{{ListID}}_ID}}.">
+          <RuleParameters>
+            <RuleParameter Name="Enabled" Value="True" />
+            <RuleParameter Name="CheckFormPostValues" Value="True" />
+            <RuleParameter Name="CheckQueryStringValues" Value="False" />
+            <RuleParameter Name="CheckStringBodyValues" Value="False" />
+            <RuleParameter Name="ProcessOnlyNestedParms" Value="False" />
+          </RuleParameters>
+        </RequestPlugin>
+      </RequestPlugins>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="False" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="none" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="0x7884A2BBB738A20D894235FC7F8727E641185C3B919E022E51365867B7182A6491D5BC9C40170A9F869FCDCCA713EAB25912DAA2136BF19AC0324527E0BA9713,15 Sep 2014 20:42:30 -0000" RecordedValue="0x7884A2BBB738A20D894235FC7F8727E641185C3B919E022E51365867B7182A6491D5BC9C40170A9F869FCDCCA713EAB25912DAA2136BF19AC0324527E0BA9713,15 Sep 2014 20:42:30 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="Browse" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="MSOZoneCell_WebPartWPQ2" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="Browse" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="/wEPBSpWU0tleTozMzgzM2NhYy1iNmUzLTRjNWItOGRmOC05NGFiYWE5ZTRlYTNkmYwRE5kkyIgsrg5ngHVHGrcg6U8BnD9GSspLFoM9rZw=" RecordedValue="/wEPBSpWU0tleTozMzgzM2NhYy1iNmUzLTRjNWItOGRmOC05NGFiYWE5ZTRlYTNkmYwRE5kkyIgsrg5ngHVHGrcg6U8BnD9GSspLFoM9rZw=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="C8A40E42" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="/wEdAAh0Qhnd9muVX29kkDAZm5hLXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGozetCBZTpp7W9tpSx6fO303coD7tQneoShd1qGd/u8o" RecordedValue="/wEdAAh0Qhnd9muVX29kkDAZm5hLXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGozetCBZTpp7W9tpSx6fO303coD7tQneoShd1qGd/u8o" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared Documents" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="f74d1d05-bdaf-4c81-b0c1-5e0a9174a0bd" Version="1.1" Url="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared%20Documents/Forms/AllItems.aspx" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x7B8C44632BAA408ECABFF622B0296D0EFFDC8CED9B280DC40AA7BFCDC2C4C0A990B9C9A2ECA1506C69E9E0EA669EC3D28BAFEDD6D5D26C02AF22E5CB5155B267,15 Sep 2014 20:42:56 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleToyMDI0ZjQyNC0wOTdjLTQyNmEtOTM1OC0xYjc1OGUwOGRlZjRkG9Vtif/qinaCrfyoNbKsL9Riq34VbjWMsj3T9xgSeUo=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAjHZGc9+pHO4UKBRQOB4OJ6XQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGstseI7YvwtuS/v9kL3qaT9oDCXyovY84JIKXdRQihE6" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="{{$HIDDEN1.ctl00$ctl35}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="a1473b14-2e5c-45c5-879e-af5505a90b86" Version="1.1" Url="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared%20Documents/Forms/AllItems.aspx" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0xDEBE79FE37AC6F0CCFCFBC47E71E955DF28A4429344B3B0A0204112426A3868F930702303639B1A686E62EBAFA97BF27B8F09C55164FF0666EE045C42641BDBF,15 Sep 2014 20:43:21 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTo4M2ZkNWI3MC0wZmNjLTRlMTctOWRhYi0xYWIwNzZkNzUzM2NkxFiF3ILn+wwtM0GthGWxT+GgXcjI1NloXq0JuEuZDPo=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAgANJuEy5kv02DhbbCbhXadXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGkFYQMU7buVA5ApmhbZqshToW3wZActuO+2s+IiYA7Zl" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="{{$HIDDEN1.ctl00$ctl35}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="c2ace3b1-f33b-43b0-bb78-300c5d47be2c" Version="1.1" Url="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/Shared%20Documents/Forms/AllItems.aspx" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x371378A98722F2661CA5207BA8A585C8A6B056F936C35FF2AA53550CABB162DEF056217FAEC699593A48ECA5A82D683BE093260B5698B10F4888B4FE5338F892,15 Sep 2014 20:43:46 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTpmNGM2MThkYS03MTUxLTQ2MzAtODAzMy1mNmY3NDAwMjE2ODhkoCSgAOIwrl0vhHRidAro5WzOed1wZzkvY6xLBoMMViY=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAjkWpYjsetPNsKB9qt1T05RXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGnFwx7roIyEo7l7KGh0Ane4POhM8M63WIhQi0dsxEpTY" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="{{$HIDDEN1.ctl00$ctl35}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <SharepointInformation SharepointVersion="SharePoint2013" HeuristicXmlEnabled="False" />
+    <Request Method="GET" Guid="6624a721-debd-4f17-aa93-2b26f47cddc9" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.SharePointExtractListViewWebPartScriptValues, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="ListID1" DisplayName="SharePoint - Extract WebParts ListView Values" Description="Extracts all values from the script portion of webpart list view in the response using the list title as the search criteria.">
+          <RuleParameters>
+            <RuleParameter Name="Enabled" Value="True" />
+            <RuleParameter Name="ListTitle" Value="Shared Documents" />
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="DefaultValue" Value="-1" />
+            <RuleParameter Name="UseDefaultValue" Value="True" />
+            <RuleParameter Name="SubFieldStart" Value="ctx.ListName = &quot;{" />
+            <RuleParameter Name="SubFieldEnd" Value="}&quot;" />
+            <RuleParameter Name="AddCommentToResults" Value="False" />
+            <RuleParameter Name="ContextParameterName" Value="" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.SharePointExtractListViewWebPartScriptValues, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="ViewID1" DisplayName="SharePoint - Extract WebParts ListView Values" Description="Extracts all values from the script portion of webpart list view in the response using the list title as the search criteria.">
+          <RuleParameters>
+            <RuleParameter Name="Enabled" Value="True" />
+            <RuleParameter Name="ListTitle" Value="Shared Documents" />
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="DefaultValue" Value="-1" />
+            <RuleParameter Name="UseDefaultValue" Value="True" />
+            <RuleParameter Name="SubFieldStart" Value="ctx.view = &quot;{" />
+            <RuleParameter Name="SubFieldEnd" Value="}&quot;" />
+            <RuleParameter Name="AddCommentToResults" Value="False" />
+            <RuleParameter Name="ContextParameterName" Value="" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.ctl00$ctl35" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="d = &quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;;_sp" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <RequestPlugins>
+        <RequestPlugin Classname="Microsoft.VisualStudio.WebTesting.PowerTools.SharePoint.MTSL.General.SPLTPT_MTSL_SetContextParameterValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Set Context Parameter Value" Description="Allows you to set a context parameter value for this request.">
+          <RuleParameters>
+            <RuleParameter Name="Enabled" Value="True" />
+            <RuleParameter Name="sContextParameterName" Value="ListID1_WithBraces" />
+            <RuleParameter Name="sContextParameterValue" Value="{{{ListID1}}}" />
+            <RuleParameter Name="bDoReplace" Value="False" />
+            <RuleParameter Name="sReplaceFindPattern" Value="" />
+            <RuleParameter Name="sReplaceWith" Value="" />
+            <RuleParameter Name="bUseRegEx" Value="False" />
+            <RuleParameter Name="bApplyBeforeRequest" Value="False" />
+            <RuleParameter Name="bHTMLEncode" Value="False" />
+            <RuleParameter Name="bHTMLDecode" Value="False" />
+            <RuleParameter Name="bURLEncode" Value="False" />
+            <RuleParameter Name="bURLDecode" Value="False" />
+            <RuleParameter Name="bBase64Encode" Value="False" />
+            <RuleParameter Name="bBase64Decode" Value="False" />
+            <RuleParameter Name="bRemoveUnicodeEscapeSequences" Value="False" />
+          </RuleParameters>
+        </RequestPlugin>
+        <RequestPlugin Classname="Microsoft.VisualStudio.WebTesting.PowerTools.SharePoint.MTSL.General.SPLTPT_MTSL_SetContextParameterValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Set Context Parameter Value" Description="Allows you to set a context parameter value for this request.">
+          <RuleParameters>
+            <RuleParameter Name="Enabled" Value="True" />
+            <RuleParameter Name="sContextParameterName" Value="ViewID1_WithBraces" />
+            <RuleParameter Name="sContextParameterValue" Value="{{{ViewID1}}}" />
+            <RuleParameter Name="bDoReplace" Value="False" />
+            <RuleParameter Name="sReplaceFindPattern" Value="" />
+            <RuleParameter Name="sReplaceWith" Value="" />
+            <RuleParameter Name="bUseRegEx" Value="False" />
+            <RuleParameter Name="bApplyBeforeRequest" Value="False" />
+            <RuleParameter Name="bHTMLEncode" Value="False" />
+            <RuleParameter Name="bHTMLDecode" Value="False" />
+            <RuleParameter Name="bURLEncode" Value="False" />
+            <RuleParameter Name="bURLDecode" Value="False" />
+            <RuleParameter Name="bBase64Encode" Value="False" />
+            <RuleParameter Name="bBase64Decode" Value="False" />
+            <RuleParameter Name="bRemoveUnicodeEscapeSequences" Value="False" />
+          </RuleParameters>
+        </RequestPlugin>
+      </RequestPlugins>
+    </Request>
+    <Request Method="GET" Guid="40be7588-c59b-47a3-94fe-ac5bd1bd90a6" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/_layouts/inplview.aspx" ThinkTime="9" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="List" Value="{{ListID1}}" RecordedValue="{F659AE4C-4B51-49BD-B054-39D3400B4D44}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="View" Value="{{ViewID1}}" RecordedValue="{4D2AE622-302D-4DFC-96B9-47E1F65F852D}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ViewCount" Value="3" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ListViewPageUrl" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%2520Documents/Forms/AllItems.aspx" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared%2520Documents/Forms/AllItems.aspx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="IsXslView" Value="TRUE" RecordedValue="TRUE" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Cmd" Value="EcbView" RecordedValue="EcbView" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="369e4097-5769-4aa7-998d-d94ad2ff7932" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam14.InitialTabId" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?InitialTabId=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam15.VisibilityContext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;VisibilityContext=" />
+            <RuleParameter Name="EndsWith" Value=")" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="InitialTabId" Value="Ribbon%2EDocument" RecordedValue="Ribbon%2EDocument" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x5EAB0F74A51F2C78F8BE66DCE362602F1F7DEC861F88189BD2B7701FF951264D57C66F6139FEFC33311277AF31BF0BECE0AA65183A385BB2ED5D3987A7CFB382,15 Sep 2014 20:46:46 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTplNjgyMDA2My1lNzMwLTRkZDktYmU5YS0yY2ZiNjc4ODJlNDdki2nW8GwhaGHvqFGPKMzoppJmprj4SXqbW8XE9DgCBUc=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAhjwCSwEwgh+PDfv1CtGaMuXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGotxd1axCBF8pe0qc8ExQ6oqj+V7OE0asYAyn9HODhNy" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="Ribbon.Document" RecordedValue="Ribbon.Document" CorrelationBinding="{{FormPostParam1.ctl00$ctl35}}" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="93905f5c-6015-4e8b-81af-43c6924433d5" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/template.dotx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="e176ad9f-7bd0-4842-a97e-e4200f8b68ef" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/template.dotx" ThinkTime="41" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="POST" Guid="51ac9ec9-15b0-4d82-8708-ebfb315de751" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx?InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam12.InitialTabId" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?InitialTabId=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam13.VisibilityContext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;VisibilityContext=" />
+            <RuleParameter Name="EndsWith" Value=")" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam22.ctl00$PlaceHolderMain$UploadDocumentSection$ctl03$OverwriteSingle" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ble=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; ari" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="InitialTabId" Value="Ribbon%2EDocument" RecordedValue="Ribbon%2EDocument" CorrelationBinding="{{QueryStringParam14.InitialTabId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="{{QueryStringParam15.VisibilityContext}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0xBB17C142BDEE446174B092B3D82B26BB2660E38F4732B561C5BED379A86AAA85E57DDA0F0D847536F1BAA69387958DE2E37BB6076A3675CD2A8D4F0A8F2E4910,15 Sep 2014 20:47:04 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTowNTI0NDVkOC1hNzlhLTQ2YTYtODFmYi1kOWJkMmUzZmVmNjRk8oJ5FpnHzbIDiprI0dfXRs6mB/oySEUNRnQPn6B662I=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAh+3uUf5tISPsmhesVGKcD4XQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGgv+v8D1kP+E+sVw5cHBYHqzQVXFUM+rFm7mhnPCKoYk" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="{{$HIDDEN1.ctl00$ctl35}}" RecordedValue="Ribbon.Document" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="9e486ef2-1505-4944-bd8c-d02585a6cf37" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/_layouts/Upload.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx?InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam12.__REQUESTDIGEST" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="18" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam13.__VIEWSTATE" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="19" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam17.__EVENTVALIDATION" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="23" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam64.RootFolder" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;RootFolder=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam65.Source" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;Source=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam66.IsDlg" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;IsDlg=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.MSOTlPn_View" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ent=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.MSOTlPn_ShowSettings" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="3" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.MSOTlPn_Button" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="y = &quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;;&#xD;&#xA;	" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.__EVENTTARGET" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ame=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; typ" />
+            <RuleParameter Name="Index" Value="39" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam6.MSOSPWebPartManager_DisplayModeName" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="9" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam7.MSOSPWebPartManager_ExitingDesignMode" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="10" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam8.MSOSPWebPartManager_OldDisplayModeName" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="9" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam9.MSOSPWebPartManager_StartWebPartEditingName" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="10" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam10.MSOSPWebPartManager_EndWebPartEditing" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="10" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam11._maintainWorkspaceScrollPosition" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ent=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam14.__VIEWSTATEGENERATOR" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="20" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam15.__SCROLLPOSITIONX" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ent=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam16.__SCROLLPOSITIONY" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ent=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam18.ctl00$PlaceHolderSearchArea$ctl00$ctl00" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="24" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam19.ctl00$PlaceHolderSearchArea$ctl00$ctl01" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="25" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam20.ctl00$PlaceHolderSearchArea$ctl00$ctl02" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&lt;" />
+            <RuleParameter Name="Index" Value="25" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam21.destination" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="32" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="List" Value="{{ListID1_WithBraces}}" RecordedValue="%7BF659AE4C%2D4B51%2D49BD%2DB054%2D39D3400B4D44%7D" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName5}}%2F{{SiteName6}}%2F{{SiteName7}}%2F{{SiteName8}}%2FShared%20Documents" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fadmin%2FShared%20Documents" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Source" Value="{{SP_Server2}}%2F{{SiteName5}}%2F{{SiteName6}}%2F{{SiteName7}}%2F{{SiteName8}}%2FShared%20Documents%2FForms%2FAllItems%2Easpx%3FInitialTabId%3DRibbon%252EDocument%26VisibilityContext%3DWSSTabPersistence" RecordedValue="https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca%2Fdo%2Fmedit%2Fteams%2Fadmin%2FShared%20Documents%2FForms%2FAllItems%2Easpx%3FInitialTabId%3DRibbon%252EDocument%26VisibilityContext%3DWSSTabPersistence" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="IsDlg" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="283072a7-f61b-4ce6-83db-8c45f4411c07" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/_layouts/UploadEx.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/_layouts/Upload.aspx?List=%7BF659AE4C%2D4B51%2D49BD%2DB054%2D39D3400B4D44%7D&amp;RootFolder=%2F{{SiteName5}}%2F{{SiteName6}}%2F{{SiteName7}}%2F{{SiteName8}}%2FShared%20Documents&amp;Source={{SP_Server2}}%2F{{SiteName5}}%2F{{SiteName6}}%2F{{SiteName7}}%2F{{SiteName8}}%2FShared%20Documents%2FForms%2FAllItems%2Easpx%3FInitialTabId%3DRibbon%252EDocument%26VisibilityContext%3DWSSTabPersistence&amp;IsDlg=1" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="List" Value="{{ListID1_WithBraces}}" RecordedValue="%7bF659AE4C-4B51-49BD-B054-39D3400B4D44%7d" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName5}}%2F{{SiteName6}}%2F{{SiteName7}}%2F{{SiteName8}}%2FShared+Documents" RecordedValue="%2fdo%2fmedit%2fteams%2fadmin%2fShared+Documents" CorrelationBinding="{{QueryStringParam64.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Source" Value="{{WebServer3}}%2F{{SiteName5}}%2F{{SiteName6}}%2F{{SiteName7}}%2F{{SiteName8}}%2FShared+Documents%2fForms%2fAllItems.aspx%3fInitialTabId%3dRibbon%252EDocument%26VisibilityContext%3dWSSTabPersistence" RecordedValue="https%3a%2f%2fteams.test.mednet.med.ubc.ca%2fdo%2fmedit%2fteams%2fadmin%2fShared+Documents%2fForms%2fAllItems.aspx%3fInitialTabId%3dRibbon%252EDocument%26VisibilityContext%3dWSSTabPersistence" CorrelationBinding="{{QueryStringParam65.Source}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="IsDlg" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam66.IsDlg}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam2.MSOTlPn_View}}" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="False" RecordedValue="False" CorrelationBinding="{{FormPostParam3.MSOTlPn_ShowSettings}}" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="none" RecordedValue="none" CorrelationBinding="{{FormPostParam4.MSOTlPn_Button}}" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="ctl00$PlaceHolderMain$ctl03$RptControls$btnOK" RecordedValue="ctl00$PlaceHolderMain$ctl03$RptControls$btnOK" CorrelationBinding="{{FormPostParam5.__EVENTTARGET}}" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="Browse" RecordedValue="Browse" CorrelationBinding="{{FormPostParam6.MSOSPWebPartManager_DisplayModeName}}" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam7.MSOSPWebPartManager_ExitingDesignMode}}" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="Browse" RecordedValue="Browse" CorrelationBinding="{{FormPostParam8.MSOSPWebPartManager_OldDisplayModeName}}" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam9.MSOSPWebPartManager_StartWebPartEditingName}}" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam10.MSOSPWebPartManager_EndWebPartEditing}}" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam11._maintainWorkspaceScrollPosition}}" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{FormPostParam12.__REQUESTDIGEST}}" RecordedValue="0x0D9E1C86DE6A5267A09BFBAD98840585296B78792DAC4C868F91176D99A7C93C32D2A2181F715A9BFAB51F2D8C34668756F6B794D4D7FC3A2D6F8DF787B222A5,15 Sep 2014 20:48:13 -0000" CorrelationBinding="{{FormPostParam12.__REQUESTDIGEST}}" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{FormPostParam13.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTplMDczOWUwNi0zYmRkLTRkMDctYTJhZi0yMmI4NjAxYTEwZjJkENnTF4+W8XJLhUw+M1QdpXE1o6EO+qSMZ8F5uMeL3oU=" CorrelationBinding="{{FormPostParam13.__VIEWSTATE}}" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="2739D10F" RecordedValue="2739D10F" CorrelationBinding="{{FormPostParam14.__VIEWSTATEGENERATOR}}" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam15.__SCROLLPOSITIONX}}" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam16.__SCROLLPOSITIONY}}" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{FormPostParam17.__EVENTVALIDATION}}" RecordedValue="/wEdAAzgGjJg/ilqUsGOSMDE4netXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdEGojf8THBQvm4Zh8n/RtsCyVBeLxtDHZjNfRkTawU84Rtfj1uxq6OufsaNc0S2lXLvV8urcxFphCtolrNEdCcBo/GKwGj6PLj73PLzojqBpH5Cp/yLNs6oIUaMVwVRnkTh9jWeQU7ycKj5Ih2o8qGbeptDzl0zOEcTzzHh1mKKRFJGaISeODlelVBHwNz2R5Yrgvsal+kRtKutkGoBGp3w==" CorrelationBinding="{{FormPostParam17.__EVENTVALIDATION}}" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="{{FormPostParam18.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared Documents" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="{{FormPostParam19.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared Documents" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="{{FormPostParam20.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="destination" Value="/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared Documents" RecordedValue="/do/medit/teams/admin/Shared Documents" CorrelationBinding="{{FormPostParam21.destination}}" UrlEncode="True" />
+        <FileUploadParameter Name="ctl00$PlaceHolderMain$UploadDocumentSection$ctl03$InputFile" FileName="Bi-Weekly Report Application Services 14-09-08.docx" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" GenerateUniqueName="True" UseGuids="True" FileUploadName="" HtmlEncodeFileName="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderMain$UploadDocumentSection$ctl03$OverwriteSingle" Value="on" RecordedValue="on" CorrelationBinding="{{FormPostParam22.ctl00$PlaceHolderMain$UploadDocumentSection$ctl03$OverwriteSingle}}" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="8003b3d3-4a4b-4b5b-ba1d-dccb10a94ca2" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx?InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam10.InitialTabId" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?InitialTabId=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam11.VisibilityContext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;VisibilityContext=" />
+            <RuleParameter Name="EndsWith" Value=")" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="InitialTabId" Value="Ribbon%2EDocument" RecordedValue="Ribbon%2EDocument" CorrelationBinding="{{QueryStringParam12.InitialTabId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="{{QueryStringParam13.VisibilityContext}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x899D9C31872E70795A843C3524E5A4E69A64E3FC2852E222846BEE9F03852C545B8204DB86E3A4944D8AA5952944EB9C48224E23975D94942D0DE00B3B1B7E5E,15 Sep 2014 20:48:02 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTpmYTRiMmFjMy1hZTA5LTRjYTQtODhjYi1mMmExMDI2NzRmMzRkBrbZWqFP0C1ZGg30esXUO4Bl5Hu92YVTE6TrbQ8RjCY=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAibUNkKEbM5Y+2Krvt3TKL0XQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGhpB0NZ1aX3n5NCX//B6DjeXuR4a2l2hdvJoz1BkKYmJ" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="{{$HIDDEN1.ctl00$ctl35}}" RecordedValue="Ribbon.Document" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="1828c302-85b2-4509-9a7a-79f0f56d9b2b" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/template.dotx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="9fb188c0-c6b0-4029-81ef-7a944c493da1" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/template.dotx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="POST" Guid="0bd1eb78-e634-4765-831e-531d137fb863" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx?InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam7.VisibilityContext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;VisibilityContext=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="InitialTabId" Value="Ribbon%2EDocument" RecordedValue="Ribbon%2EDocument" CorrelationBinding="{{QueryStringParam10.InitialTabId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="{{QueryStringParam11.VisibilityContext}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x8FDEAD4EEE55800D13EF8B686DD3F1F755B665D7099F7EBF429696DF87DEFD508D9887F1D84172DBFED2941A5473D4076CD6A955C01AD058A13FD4DC2E40575C,15 Sep 2014 20:48:26 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleToxNzRjMjBkNi02ODRiLTQ4MDAtYjEyOC04MWMxMjcwZGQ5NDFkOD0nN3NNjaHUb4qnzOng4nNfWdC0rVtryiaucmDTGuU=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAgBpDbPmCK9fdceYs2FW0dpXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGuZcZLwaGP22msBO6ThuHbD3wGeU1+up20r7RPgOkran" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="{{$HIDDEN1.ctl00$ctl35}}" RecordedValue="Ribbon.Document" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="e0cbd5f6-def7-489c-af56-950b35ca7331" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx?InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="__REQUESTDIGEST" DisplayName="Extract Form Field" Description="Extract the value of a specified form field in the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="__REQUESTDIGEST" />
+            <RuleParameter Name="HtmlDecode" Value="False" />
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="ContextParameterName" Value="" />
+            <RuleParameter Name="Enabled" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam2.InitialTabId" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;InitialTabId=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam3.VisibilityContext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;VisibilityContext=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="ShowInGrid" Value="True" RecordedValue="True" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="%7B4D2AE622%2D302D%2D4DFC%2D96B9%2D47E1F65F852D%7D" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="InitialTabId" Value="Ribbon%2ELibrary" RecordedValue="Ribbon%2ELibrary" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="{{QueryStringParam7.VisibilityContext}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0xBA9C38B62308164EBF799E9FED2BD10CFF50BB58D34027882B9CBEA71B16E01E219197E9BDCDCEAB84569D1F83C795BAF945C454A3FC0E93EA36EE2C41C62D34,15 Sep 2014 20:49:05 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTplNjQ4NTc5ZS0xMjJkLTQwYjUtYjY5NC0zM2NiNzlmMmFhYWZknypNMaJjqKwOFZlpQHYIF8fF0Y8BHgm46pSo7f6lcqk=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAjE5uqxFpcyTM0Lm1Z47zNsXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGv6yUfa3jj8bRmwR60jRTthWCBDgWuRz3g2gUg2OGgea" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="Ribbon.Library" RecordedValue="Ribbon.Library" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="ea9bcaa5-7690-4721-8856-0f74870ddfbb" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/_vti_bin/client.svc/ProcessQuery" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx?ShowInGrid=True&amp;View=%7B4D2AE622%2D302D%2D4DFC%2D96B9%2D47E1F65F852D%7D&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
+        <Header Name="x-requestdigest" Value="{{__REQUESTDIGEST}}" />
+        <Header Name="x-requested-with" Value="XMLHttpRequest" />
+      </Headers>
+      <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PABSAGUAcQB1AGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAGMAbABpAGUAbgB0AHEAdQBlAHIAeQAvADIAMAAwADkAIgAgAFMAYwBoAGUAbQBhAFYAZQByAHMAaQBvAG4APQAiADEANAAuADAALgAwAC4AMAAiACAATABpAGIAcgBhAHIAeQBWAGUAcgBzAGkAbwBuAD0AIgAxADQALgAwAC4ANwAwADAANwAuADEAMAAwADAAIgAgAEEAcABwAGwAaQBjAGEAdABpAG8AbgBOAGEAbQBlAD0AIgBKAGEAdgBhAHMAYwByAGkAcAB0ACAATABpAGIAcgBhAHIAeQAiAD4APABBAGMAdABpAG8AbgBzAD4APABPAGIAagBlAGMAdABQAGEAdABoACAASQBkAD0AIgAxACIAIABPAGIAagBlAGMAdABQAGEAdABoAEkAZAA9ACIAMAAiACAALwA+ADwATwBiAGoAZQBjAHQAUABhAHQAaAAgAEkAZAA9ACIAMwAiACAATwBiAGoAZQBjAHQAUABhAHQAaABJAGQAPQAiADIAIgAgAC8APgA8AE8AYgBqAGUAYwB0AFAAYQB0AGgAIABJAGQAPQAiADUAIgAgAE8AYgBqAGUAYwB0AFAAYQB0AGgASQBkAD0AIgA0ACIAIAAvAD4APABPAGIAagBlAGMAdABQAGEAdABoACAASQBkAD0AIgA3ACIAIABPAGIAagBlAGMAdABQAGEAdABoAEkAZAA9ACIANgAiACAALwA+ADwAUQB1AGUAcgB5ACAASQBkAD0AIgA4ACIAIABPAGIAagBlAGMAdABQAGEAdABoAEkAZAA9ACIANgAiAD4APABRAHUAZQByAHkAIABTAGUAbABlAGMAdABBAGwAbABQAHIAbwBwAGUAcgB0AGkAZQBzAD0AIgBmAGEAbABzAGUAIgA+ADwAUAByAG8AcABlAHIAdABpAGUAcwA+ADwAUAByAG8AcABlAHIAdAB5ACAATgBhAG0AZQA9ACIAQgBhAHMAZQBUAHkAcABlACIAIABTAGMAYQBsAGEAcgBQAHIAbwBwAGUAcgB0AHkAPQAiAHQAcgB1AGUAIgAgAC8APgA8AFAAcgBvAHAAZQByAHQAeQAgAE4AYQBtAGUAPQAiAEQAZQBmAGEAdQBsAHQATgBlAHcARgBvAHIAbQBVAHIAbAAiACAAUwBjAGEAbABhAHIAUAByAG8AcABlAHIAdAB5AD0AIgB0AHIAdQBlACIAIAAvAD4APABQAHIAbwBwAGUAcgB0AHkAIABOAGEAbQBlAD0AIgBEAGUAZgBhAHUAbAB0AEQAaQBzAHAAbABhAHkARgBvAHIAbQBVAHIAbAAiACAAUwBjAGEAbABhAHIAUAByAG8AcABlAHIAdAB5AD0AIgB0AHIAdQBlACIAIAAvAD4APABQAHIAbwBwAGUAcgB0AHkAIABOAGEAbQBlAD0AIgBEAGUAZgBhAHUAbAB0AEUAZABpAHQARgBvAHIAbQBVAHIAbAAiACAAUwBjAGEAbABhAHIAUAByAG8AcABlAHIAdAB5AD0AIgB0AHIAdQBlACIAIAAvAD4APAAvAFAAcgBvAHAAZQByAHQAaQBlAHMAPgA8AC8AUQB1AGUAcgB5AD4APAAvAFEAdQBlAHIAeQA+ADwATwBiAGoAZQBjAHQAUABhAHQAaAAgAEkAZAA9ACIAMQAwACIAIABPAGIAagBlAGMAdABQAGEAdABoAEkAZAA9ACIAOQAiACAALwA+ADwAUQB1AGUAcgB5ACAASQBkAD0AIgAxADEAIgAgAE8AYgBqAGUAYwB0AFAAYQB0AGgASQBkAD0AIgA5ACIAPgA8AFEAdQBlAHIAeQAgAFMAZQBsAGUAYwB0AEEAbABsAFAAcgBvAHAAZQByAHQAaQBlAHMAPQAiAGYAYQBsAHMAZQAiAD4APABQAHIAbwBwAGUAcgB0AGkAZQBzACAALwA+ADwALwBRAHUAZQByAHkAPgA8AEMAaABpAGwAZABJAHQAZQBtAFEAdQBlAHIAeQAgAFMAZQBsAGUAYwB0AEEAbABsAFAAcgBvAHAAZQByAHQAaQBlAHMAPQAiAGYAYQBsAHMAZQAiAD4APABQAHIAbwBwAGUAcgB0AGkAZQBzAD4APABQAHIAbwBwAGUAcgB0AHkAIABOAGEAbQBlAD0AIgBOAGEAbQBlACIAIABTAGMAYQBsAGEAcgBQAHIAbwBwAGUAcgB0AHkAPQAiAHQAcgB1AGUAIgAgAC8APgA8AFAAcgBvAHAAZQByAHQAeQAgAE4AYQBtAGUAPQAiAEQAaQBzAHAAbABhAHkARgBvAHIAbQBVAHIAbAAiACAAUwBjAGEAbABhAHIAUAByAG8AcABlAHIAdAB5AD0AIgB0AHIAdQBlACIAIAAvAD4APABQAHIAbwBwAGUAcgB0AHkAIABOAGEAbQBlAD0AIgBOAGUAdwBGAG8AcgBtAFUAcgBsACIAIABTAGMAYQBsAGEAcgBQAHIAbwBwAGUAcgB0AHkAPQAiAHQAcgB1AGUAIgAgAC8APgA8AFAAcgBvAHAAZQByAHQAeQAgAE4AYQBtAGUAPQAiAEUAZABpAHQARgBvAHIAbQBVAHIAbAAiACAAUwBjAGEAbABhAHIAUAByAG8AcABlAHIAdAB5AD0AIgB0AHIAdQBlACIAIAAvAD4APAAvAFAAcgBvAHAAZQByAHQAaQBlAHMAPgA8AC8AQwBoAGkAbABkAEkAdABlAG0AUQB1AGUAcgB5AD4APAAvAFEAdQBlAHIAeQA+ADwALwBBAGMAdABpAG8AbgBzAD4APABPAGIAagBlAGMAdABQAGEAdABoAHMAPgA8AFMAdABhAHQAaQBjAFAAcgBvAHAAZQByAHQAeQAgAEkAZAA9ACIAMAAiACAAVAB5AHAAZQBJAGQAPQAiAHsAMwA3ADQANwBhAGQAYwBkAC0AYQAzAGMAMwAtADQAMQBiADkALQBiAGYAYQBiAC0ANABhADYANABkAGQAMgBmADEAZQAwAGEAfQAiACAATgBhAG0AZQA9ACIAQwB1AHIAcgBlAG4AdAAiACAALwA+ADwAUAByAG8AcABlAHIAdAB5ACAASQBkAD0AIgAyACIAIABQAGEAcgBlAG4AdABJAGQAPQAiADAAIgAgAE4AYQBtAGUAPQAiAFcAZQBiACIAIAAvAD4APABQAHIAbwBwAGUAcgB0AHkAIABJAGQAPQAiADQAIgAgAFAAYQByAGUAbgB0AEkAZAA9ACIAMgAiACAATgBhAG0AZQA9ACIATABpAHMAdABzACIAIAAvAD4APABNAGUAdABoAG8AZAAgAEkAZAA9ACIANgAiACAAUABhAHIAZQBuAHQASQBkAD0AIgA0ACIAIABOAGEAbQBlAD0AIgBHAGUAdABCAHkASQBkACIAPgA8AFAAYQByAGEAbQBlAHQAZQByAHMAPgA8AFAAYQByAGEAbQBlAHQAZQByACAAVAB5AHAAZQA9ACIARwB1AGkAZAAiAD4AewB7AEwAaQBzAHQASQBEADEAXwBXAGkAdABoAEIAcgBhAGMAZQBzAH0AfQA8AC8AUABhAHIAYQBtAGUAdABlAHIAPgA8AC8AUABhAHIAYQBtAGUAdABlAHIAcwA+ADwALwBNAGUAdABoAG8AZAA+ADwAUAByAG8AcABlAHIAdAB5ACAASQBkAD0AIgA5ACIAIABQAGEAcgBlAG4AdABJAGQAPQAiADYAIgAgAE4AYQBtAGUAPQAiAEMAbwBuAHQAZQBuAHQAVAB5AHAAZQBzACIAIAAvAD4APAAvAE8AYgBqAGUAYwB0AFAAYQB0AGgAcwA+ADwALwBSAGUAcQB1AGUAcwB0AD4A</StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="3403bcaa-563e-4a5d-9eb3-12cad7c3f0e0" Version="1.1" Url="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{SP_Server}}/{{SiteName5}}/{{SiteName6}}/{{SiteName7}}/{{SiteName8}}/Shared%20Documents/Forms/AllItems.aspx?ShowInGrid=True&amp;View=%7B4D2AE622%2D302D%2D4DFC%2D96B9%2D47E1F65F852D%7D&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="%7B4D2AE622%2D302D%2D4DFC%2D96B9%2D47E1F65F852D%7D" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ShowInGrid" Value="HTML" RecordedValue="HTML" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="InitialTabId" Value="Ribbon%2ELibrary" RecordedValue="Ribbon%2ELibrary" CorrelationBinding="{{QueryStringParam2.InitialTabId}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="{{QueryStringParam3.VisibilityContext}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x03BD7BD3BAA7CDAA2A575930412433363920EA2DD64B60F8CC034F5A703AEE29C6D996EAAE55DC342DF3AF65D6584B4A7A816A04532251EA378566EB42249C12,15 Sep 2014 20:49:15 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTozMWZjZTc1Ny1jYmI0LTQ1MjUtODFkZS0zNWExM2FhYzdhMzBkAA8m3kgc+wfIhWrfixpuufHJnQPENRu6nkmzavSdbOM=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="C8A40E42" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAjMcOguvhYnBkLku9ff74DZXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGk70dW4zaiKcJdwvPvVjekop8kevKBLfgBqYO1S/zGL/" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="{{$HIDDEN1.ctl00$ctl35}}" RecordedValue="Ribbon.Library" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/admin/Shared Documents" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="SiteName1" Value="do" />
+    <ContextParameter Name="SiteName2" Value="medit" />
+    <ContextParameter Name="SiteName3" Value="teams" />
+    <ContextParameter Name="SiteName4" Value="admin" />
+    <ContextParameter Name="SiteName5" Value="do" />
+    <ContextParameter Name="SiteName6" Value="medit" />
+    <ContextParameter Name="SiteName7" Value="teams" />
+    <ContextParameter Name="SiteName8" Value="admin" />
+    <ContextParameter Name="SP_Server" Value="https://teams.test.mednet.med.ubc.ca" />
+    <ContextParameter Name="SP_Server2" Value="https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca" />
+    <ContextParameter Name="WebServer3" Value="https%3a%2f%2fteams.test.mednet.med.ubc.ca" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.SharePointValidationRuleFindText2, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="SharePoint - Find Multiple Text Occurrences" Description="Similar to the Find Text validation rule but allows you to specify more than a single text string." Level="High" ExectuionOrder="BeforeDependents">
+      <RuleParameters>
+        <RuleParameter Name="ErrorTextPattern" Value="\[{&quot;Error&quot;:[^n];&quot;SharepointError&quot;;&quot;HasException&quot;:true" />
+        <RuleParameter Name="ErrorPassIfTextFound" Value="False" />
+        <RuleParameter Name="ErrorUseRegEx" Value="True" />
+        <RuleParameter Name="StopTestTextPattern" Value="" />
+        <RuleParameter Name="StopTestPassIfTextFound" Value="False" />
+        <RuleParameter Name="StopTestUseRegEx" Value="False" />
+        <RuleParameter Name="StringSeparator" Value=";" />
+        <RuleParameter Name="Enabled" Value="True" />
+      </RuleParameters>
+    </ValidationRule>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents">
+      <RuleParameters>
+        <RuleParameter Name="IgnoreCase" Value="True" />
+      </RuleParameters>
+    </ValidationRule>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>
