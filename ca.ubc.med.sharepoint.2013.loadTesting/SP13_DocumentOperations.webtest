@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="SP13_DocumentOperations" Id="0a695509-92fa-499c-9029-2e4db4f5fc61" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.e68a132b-2d75-409b-b827-839535811b1f.rec.webtestresult" ResultsLocale="">
+<WebTest Name="SP13_DocumentOperations" Id="76d8a122-67c7-4a43-a1d7-d6371cd47d45" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.2dd07128-1e8e-42b1-a9d7-29744baa0c24.rec.webtestresult" ResultsLocale="">
   <Items>
-    <Request Method="GET" Guid="e832ce04-c2b9-4135-8556-c3d66289aa4f" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="218f1cc0-d087-4def-8095-9c320fa8fe63" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <ExtractionRules>
         <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.SharePointExtractListViewWebPartScriptValues, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="ViewID1" DisplayName="SharePoint - Extract WebParts ListView Values" Description="Extracts all values from the script portion of webpart list view in the response using the list title as the search criteria.">
           <RuleParameters>
@@ -37,11 +37,237 @@
             <RuleParameter Name="bRemoveUnicodeEscapeSequences" Value="False" />
           </RuleParameters>
         </RequestPlugin>
+        <RequestPlugin Classname="Microsoft.VisualStudio.WebTesting.PowerTools.SharePoint.MTSL.General.SPLTPT_MTSL_SetContextParameterValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Set Context Parameter Value" Description="Allows you to set a context parameter value for this request.">
+          <RuleParameters>
+            <RuleParameter Name="Enabled" Value="True" />
+            <RuleParameter Name="sContextParameterName" Value="ViewID1_URLEncoded_WithBraces" />
+            <RuleParameter Name="sContextParameterValue" Value="{{{ViewID1}}}" />
+            <RuleParameter Name="bDoReplace" Value="False" />
+            <RuleParameter Name="sReplaceFindPattern" Value="" />
+            <RuleParameter Name="sReplaceWith" Value="" />
+            <RuleParameter Name="bUseRegEx" Value="False" />
+            <RuleParameter Name="bApplyBeforeRequest" Value="False" />
+            <RuleParameter Name="bHTMLEncode" Value="False" />
+            <RuleParameter Name="bHTMLDecode" Value="False" />
+            <RuleParameter Name="bURLEncode" Value="True" />
+            <RuleParameter Name="bURLDecode" Value="False" />
+            <RuleParameter Name="bBase64Encode" Value="False" />
+            <RuleParameter Name="bBase64Decode" Value="False" />
+            <RuleParameter Name="bRemoveUnicodeEscapeSequences" Value="False" />
+          </RuleParameters>
+        </RequestPlugin>
       </RequestPlugins>
     </Request>
-    <Request Method="POST" Guid="7ae05763-3169-42f2-9575-5439d496c69c" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Comment CommentText="Navigate - Sharepoint Health Check 2010" />
+    <Request Method="POST" Guid="2eaf98b1-7a0e-4df8-9d5d-2061ccff15f3" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}" />
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam34.DefaultItemOpen" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;DefaultItemOpen=" />
+            <RuleParameter Name="EndsWith" Value="&lt;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FolderCTID" Value="0x01200052A270E6964DE64BA0905F24630E0895" RecordedValue="0x01200052A270E6964DE64BA0905F24630E0895" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="View" Value="{{ViewID1}}" RecordedValue="{1907EC4D-1213-4775-84C4-728AF6406AD2}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="False" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="none" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="0xDCBC9D8FF532AF6510DE63893ACA4AE9F6EFB3EB8E303D9E97B7260F13B2A839ABD7D7CC403DDF7587BBE76CC9A0CA7FED890D1DEDF581C59061513D19D2D007,16 Sep 2014 17:41:01 -0000" RecordedValue="0xDCBC9D8FF532AF6510DE63893ACA4AE9F6EFB3EB8E303D9E97B7260F13B2A839ABD7D7CC403DDF7587BBE76CC9A0CA7FED890D1DEDF581C59061513D19D2D007,16 Sep 2014 17:41:01 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="Browse" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="MSOZoneCell_WebPartWPQ2" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="Browse" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="/wEPBSpWU0tleToyMGFiNmFiYy0wZWRiLTRlZTQtOWU5Zi05ZDM0YmQzMTkzMWNkthQdcf7riQ/nadbJPQW2tugGrbydFGE1/vG5/EcAMOA=" RecordedValue="/wEPBSpWU0tleToyMGFiNmFiYy0wZWRiLTRlZTQtOWU5Zi05ZDM0YmQzMTkzMWNkthQdcf7riQ/nadbJPQW2tugGrbydFGE1/vG5/EcAMOA=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="B8ECB702" RecordedValue="B8ECB702" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="/wEdAAgJ1nD4+mFxcedSN9Evbg8/XQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGorB4ajIiXCRMWShHsudf27pdem4l4qRwqeV41Tc7jBr" RecordedValue="/wEdAAgJ1nD4+mFxcedSN9Evbg8/XQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGorB4ajIiXCRMWShHsudf27pdem4l4qRwqeV41Tc7jBr" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="Click 'Library' on the Library Tools menu item" />
+    <Comment CommentText="Process - Open Med IT Objectives for Sharepoint health check" />
+    <Request Method="GET" Guid="d3f562b1-be6b-4d8e-91ed-a79b779cbdda" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam31.RootFolder" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?RootFolder=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam32.FolderCTID" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;FolderCTID=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <RequestPlugins>
+        <RequestPlugin Classname="Microsoft.VisualStudio.WebTesting.PowerTools.SharePoint.MTSL.General.SPLTPT_MTSL_SetContextParameterValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Set Context Parameter Value" Description="Allows you to set a context parameter value for this request.">
+          <RuleParameters>
+            <RuleParameter Name="Enabled" Value="True" />
+            <RuleParameter Name="sContextParameterName" Value="ItemID_1" />
+            <RuleParameter Name="sContextParameterValue" Value="/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/SharePoint%20Health%20Check%202010/MedIT%20Objectives%20for%20SharePoint%20Health%20Check.xlsx" />
+            <RuleParameter Name="bDoReplace" Value="False" />
+            <RuleParameter Name="sReplaceFindPattern" Value="" />
+            <RuleParameter Name="sReplaceWith" Value="" />
+            <RuleParameter Name="bUseRegEx" Value="False" />
+            <RuleParameter Name="bApplyBeforeRequest" Value="True" />
+            <RuleParameter Name="bHTMLEncode" Value="False" />
+            <RuleParameter Name="bHTMLDecode" Value="False" />
+            <RuleParameter Name="bURLEncode" Value="True" />
+            <RuleParameter Name="bURLDecode" Value="False" />
+            <RuleParameter Name="bBase64Encode" Value="False" />
+            <RuleParameter Name="bBase64Decode" Value="False" />
+            <RuleParameter Name="bRemoveUnicodeEscapeSequences" Value="False" />
+          </RuleParameters>
+        </RequestPlugin>
+      </RequestPlugins>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="{{ItemID_1}}" RecordedValue="/do/medit/teams/application_services/docs/SharePoint%20Health%20Check%202010/MedIT%20Objectives%20for%20SharePoint%20Health%20Check.xlsx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Source" Value="https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FForms%2FAllItems%2Easpx%3FRootFolder%3D%252Fdo%252Fmedit%252Fteams%252Fapplication%255Fservices%252Fdocs%252FSharePoint%2520Health%2520Check%25202010%26FolderCTID%3D0x01200052A270E6964DE64BA0905F24630E0895%26View%3D{{ViewID1_URLEncoded_WithBraces}}" RecordedValue="https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FForms%2FAllItems%2Easpx%3FRootFolder%3D%252Fdo%252Fmedit%252Fteams%252Fapplication%255Fservices%252Fdocs%252FSharePoint%2520Health%2520Check%25202010%26FolderCTID%3D0x01200052A270E6964DE64BA0905F24630E0895%26View%3D%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="DefaultItemOpen" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam34.DefaultItemOpen}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="07a7d999-5f30-49fb-903c-d74b7c61f65b" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx?id=/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/SharePoint%20Health%20Check%202010/MedIT%20Objectives%20for%20SharePoint%20Health%20Check.xlsx&amp;Source=https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FForms%2FAllItems%2Easpx%3FRootFolder%3D%252Fdo%252Fmedit%252Fteams%252Fapplication%255Fservices%252Fdocs%252FSharePoint%2520Health%2520Check%25202010%26FolderCTID%3D0x01200052A270E6964DE64BA0905F24630E0895%26View%3D%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;DefaultItemOpen=1" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam29.DefaultItemOpen" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;DefaultItemOpen=" />
+            <RuleParameter Name="EndsWith" Value="&lt;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam31.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FolderCTID" Value="0x01200052A270E6964DE64BA0905F24630E0895" RecordedValue="0x01200052A270E6964DE64BA0905F24630E0895" CorrelationBinding="{{QueryStringParam32.FolderCTID}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="{1907EC4D-1213-4775-84C4-728AF6406AD2}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="dd800ac7-0622-4839-8197-6a2483d111b3" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam26.RootFolder" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?RootFolder=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam27.FolderCTID" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;FolderCTID=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <RequestPlugins>
+        <RequestPlugin Classname="Microsoft.VisualStudio.WebTesting.PowerTools.SharePoint.MTSL.General.SPLTPT_MTSL_SetContextParameterValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Set Context Parameter Value" Description="Allows you to set a context parameter value for this request.">
+          <RuleParameters>
+            <RuleParameter Name="Enabled" Value="True" />
+            <RuleParameter Name="sContextParameterName" Value="ItemID_2" />
+            <RuleParameter Name="sContextParameterValue" Value="/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/SharePoint%20Health%20Check%202010/MedIT%20SharePoint%20Health%20Check%20Schedule.xlsx" />
+            <RuleParameter Name="bDoReplace" Value="False" />
+            <RuleParameter Name="sReplaceFindPattern" Value="" />
+            <RuleParameter Name="sReplaceWith" Value="" />
+            <RuleParameter Name="bUseRegEx" Value="False" />
+            <RuleParameter Name="bApplyBeforeRequest" Value="True" />
+            <RuleParameter Name="bHTMLEncode" Value="False" />
+            <RuleParameter Name="bHTMLDecode" Value="False" />
+            <RuleParameter Name="bURLEncode" Value="True" />
+            <RuleParameter Name="bURLDecode" Value="False" />
+            <RuleParameter Name="bBase64Encode" Value="False" />
+            <RuleParameter Name="bBase64Decode" Value="False" />
+            <RuleParameter Name="bRemoveUnicodeEscapeSequences" Value="False" />
+          </RuleParameters>
+        </RequestPlugin>
+      </RequestPlugins>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="{{ItemID_2}}" RecordedValue="/do/medit/teams/application_services/docs/SharePoint%20Health%20Check%202010/MedIT%20SharePoint%20Health%20Check%20Schedule.xlsx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Source" Value="https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FForms%2FAllItems%2Easpx%3FRootFolder%3D%252Fdo%252Fmedit%252Fteams%252Fapplication%255Fservices%252Fdocs%252FSharePoint%2520Health%2520Check%25202010%26FolderCTID%3D0x01200052A270E6964DE64BA0905F24630E0895%26View%3D{{ViewID1_URLEncoded_WithBraces}}" RecordedValue="https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FForms%2FAllItems%2Easpx%3FRootFolder%3D%252Fdo%252Fmedit%252Fteams%252Fapplication%255Fservices%252Fdocs%252FSharePoint%2520Health%2520Check%25202010%26FolderCTID%3D0x01200052A270E6964DE64BA0905F24630E0895%26View%3D%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="DefaultItemOpen" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam29.DefaultItemOpen}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="895420be-a17d-4ae6-8792-cd5eaa1ed963" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx?id=/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/SharePoint%20Health%20Check%202010/MedIT%20SharePoint%20Health%20Check%20Schedule.xlsx&amp;Source=https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FForms%2FAllItems%2Easpx%3FRootFolder%3D%252Fdo%252Fmedit%252Fteams%252Fapplication%255Fservices%252Fdocs%252FSharePoint%2520Health%2520Check%25202010%26FolderCTID%3D0x01200052A270E6964DE64BA0905F24630E0895%26View%3D%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;DefaultItemOpen=1" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam26.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FolderCTID" Value="0x01200052A270E6964DE64BA0905F24630E0895" RecordedValue="0x01200052A270E6964DE64BA0905F24630E0895" CorrelationBinding="{{QueryStringParam27.FolderCTID}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="{1907EC4D-1213-4775-84C4-728AF6406AD2}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="6509b860-faa4-4061-b59b-56a94cd22837" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}" />
       </Headers>
       <ExtractionRules>
         <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
@@ -52,11 +278,117 @@
         </ExtractionRule>
       </ExtractionRules>
       <CorrelationExtractionRules>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam13.RootFolder" DisplayName="" Description="">
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam24.RootFolder" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?RootFolder=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="48" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam25.FolderCTID" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;FolderCTID=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="48" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="da14964f-c13f-4309-a202-82db51f024a3" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam18.RootFolder" DisplayName="" Description="">
           <RuleParameters>
             <RuleParameter Name="StartsWith" Value="?RootFolder=" />
             <RuleParameter Name="EndsWith" Value="&amp;" />
             <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam24.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FolderCTID" Value="0x01200052A270E6964DE64BA0905F24630E0895" RecordedValue="0x01200052A270E6964DE64BA0905F24630E0895" CorrelationBinding="{{QueryStringParam25.FolderCTID}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="{1907EC4D-1213-4775-84C4-728AF6406AD2}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0xFEE6E74EB7D5E1F7EABDCB33B1AFCA9247F04FCA63D11FEDFAC6C6C4001AB2B0B5141AAEA8BBEC070EB554C390A3FD462318D5D093592D901ABC219869A0FDAB,16 Sep 2014 17:42:42 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTpiZDg0ZDVkNS1mMjkxLTQ2MjYtOThhNi01YTBmZmZhYTdkYTVkdDh7E6Jt4u0NM/vaC1174mO326kQDQ4Tjng6D3/a3EI=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="B8ECB702" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAhxUjDLnByV1rOr9tSGbWl4XQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGiyVeSBDUs2+4Abi+PpL86Hv7NnsUjPG6TLAo5a/Pfzk" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="{{$HIDDEN1.ctl00$ctl35}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="27362220-c68c-4af6-ac9e-05148aef02ba" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam12.RootFolder" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;RootFolder=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="1" />
             <RuleParameter Name="IgnoreCase" Value="False" />
             <RuleParameter Name="UseRegularExpression" Value="False" />
             <RuleParameter Name="HtmlDecode" Value="True" />
@@ -85,87 +417,59 @@
             <RuleParameter Name="Required" Value="False" />
           </RuleParameters>
         </ExtractionRule>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam23.RootFolder" DisplayName="" Description="">
-          <RuleParameters>
-            <RuleParameter Name="StartsWith" Value="?RootFolder=" />
-            <RuleParameter Name="EndsWith" Value="&amp;" />
-            <RuleParameter Name="Index" Value="2" />
-            <RuleParameter Name="IgnoreCase" Value="False" />
-            <RuleParameter Name="UseRegularExpression" Value="False" />
-            <RuleParameter Name="HtmlDecode" Value="True" />
-            <RuleParameter Name="Required" Value="False" />
-          </RuleParameters>
-        </ExtractionRule>
       </CorrelationExtractionRules>
       <QueryStringParameters>
-        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="FolderCTID" Value="0x01200052A270E6964DE64BA0905F24630E0895" RecordedValue="0x01200052A270E6964DE64BA0905F24630E0895" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="View" Value="{{ViewID1}}" RecordedValue="{1907EC4D-1213-4775-84C4-728AF6406AD2}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ShowInGrid" Value="True" RecordedValue="True" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam18.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
         <QueryStringParameter Name="InitialTabId" Value="Ribbon%2ELibrary" RecordedValue="Ribbon%2ELibrary" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
         <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
       <FormPostHttpBody>
-        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOTlPn_View" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="False" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOGallery_FilterString" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOTlPn_Button" Value="none" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__EVENTTARGET" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__EVENTARGUMENT" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__REQUESTDIGEST" Value="0xF7E251CCF4EA90655C6B8D3D218AA84D9F55BFBEAF1F4D02844A24F9DCCFF6F28170FDEEDBA5DDED519532BEE727187D52A295F4F948A8EEC16D5F5E70F1A019,16 Sep 2014 17:25:36 -0000" RecordedValue="0xF7E251CCF4EA90655C6B8D3D218AA84D9F55BFBEAF1F4D02844A24F9DCCFF6F28170FDEEDBA5DDED519532BEE727187D52A295F4F948A8EEC16D5F5E70F1A019,16 Sep 2014 17:25:36 -0000" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="Browse" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOWebPartPage_Shared" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOLayout_InDesignMode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="_wpSelected" Value="MSOZoneCell_WebPartWPQ2" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="_wzSelected" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="Browse" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__VIEWSTATE" Value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWAgIDD2QWEAIDD2QWAgUmZ18xOTA3ZWM0ZF8xMjEzXzQ3NzVfODRjNF83MjhhZjY0MDZhZDIQDxYUHgtEZXNjcmlwdGlvbgUYRGVmYXVsdCBkb2N1bWVudCBsaWJyYXJ5HglEaXJlY3Rpb24LKipTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkNvbnRlbnREaXJlY3Rpb24AHgVUaXRsZQUJRG9jdW1lbnRzHgpDaHJvbWVUeXBlZh4MX3ZpZXdDb3VudGVyAobnAR4FV2lkdGgcHhBGaWx0ZXJPcGVyYXRpb25zMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAseBkhlaWdodBweBF8hU0ICgIMIHgtQYXJhbVZhbHVlczLYCwABAAAA/////wEAAAAAAAAADAIAAABYTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwUBAAAAPU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5QYXJhbWV0ZXJOYW1lVmFsdWVIYXNodGFibGUBAAAABV9jb2xsAxxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlAgAAAAkDAAAABAMAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQcAAAAKTG9hZEZhY3RvcgdWZXJzaW9uCENvbXBhcmVyEEhhc2hDb2RlUHJvdmlkZXIISGFzaFNpemUES2V5cwZWYWx1ZXMAAAMDAAUFCwgcU3lzdGVtLkNvbGxlY3Rpb25zLklDb21wYXJlciRTeXN0ZW0uQ29sbGVjdGlvbnMuSUhhc2hDb2RlUHJvdmlkZXII7FE4PxEAAAAKChcAAAAJBAAAAAkFAAAAEAQAAAAMAAAABgYAAAATc2VsZWN0X2Rlc2VsZWN0X2FsbAYHAAAAD05vQW5ub3VuY2VtZW50cwYIAAAACW9wZW5fbWVudQYJAAAADWlkUHJlc0VuYWJsZWQGCgAAAApSb290Rm9sZGVyBgsAAAAKU2VsZWN0ZWRJRAYMAAAAEWR2dF9zdGFydHBvc2l0aW9uBg0AAAAKRmlsdGVyTGluawYOAAAAFE5vQW5ub3VuY2VtZW50c0hvd1RvBg8AAAAQZHZ0X3ByZXZwYWdlZGF0YQYQAAAACkZvbGRlckNUSUQGEQAAABVPcGVuTWVudUtleUFjY2Vzc2libGUQBQAAAAwAAAAGEgAAABxTZWxlY3Qgb3IgZGVzZWxlY3QgYWxsIGl0ZW1zBhMAAABMVGhlcmUgYXJlIG5vIGl0ZW1zIHRvIHNob3cgaW4gdGhpcyB2aWV3IG9mIHRoZSAiRG9jdW1lbnRzIiBkb2N1bWVudCBsaWJyYXJ5LgYUAAAACU9wZW4gTWVudQYVAAAAIFByZXNlbmNlIGVuYWJsZWQgZm9yIHRoaXMgY29sdW1uBhYAAABGL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL2RvY3MvU2hhcmVQb2ludCBIZWFsdGggQ2hlY2sgMjAxMAYXAAAAAi0xBhgAAAAABhkAAACbAT9Sb290Rm9sZGVyPSUyRmRvJTJGbWVkaXQlMkZ0ZWFtcyUyRmFwcGxpY2F0aW9uJTVGc2VydmljZXMlMkZkb2NzJTJGU2hhcmVQb2ludCUyMEhlYWx0aCUyMENoZWNrJTIwMjAxMCZGb2xkZXJDVElEPTB4MDEyMDAwNTJBMjcwRTY5NjRERTY0QkEwOTA1RjI0NjMwRTA4OTUmBhoAAAArVG8gYWRkIGEgbmV3IGl0ZW0sIGNsaWNrICJOZXciIG9yICJVcGxvYWQiLgYbAAAA5QFQYWdlZD1UUlVFJlBhZ2VkUHJldj1UUlVFJnBfU29ydEJlaGF2aW9yPTAmcF9GaWxlTGVhZlJlZj1NZWRJVCUyME9iamVjdGl2ZXMlMjBmb3IlMjBTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMmV4bHN4JnBfSUQ9MTY4JlJvb3RGb2xkZXI9JTJmZG8lMmZtZWRpdCUyZnRlYW1zJTJmYXBwbGljYXRpb24lNWZzZXJ2aWNlcyUyZmRvY3MlMmZTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMjAyMDEwBhwAAAAoMHgwMTIwMDA1MkEyNzBFNjk2NERFNjRCQTA5MDVGMjQ2MzBFMDg5NQYdAAAALlVzZSBTSElGVCtFTlRFUiB0byBvcGVuIHRoZSBtZW51IChuZXcgd2luZG93KS4LZGRkAhEPZBYEZg9kFgQCAQ9kFgJmD2QWBAICD2QWFgIBDxYCHgdWaXNpYmxlaGQCAw8WCB4TQ2xpZW50T25DbGlja1NjcmlwdAWqAWphdmFTY3JpcHQ6Q29yZUludm9rZSgnVGFrZU9mZmxpbmVUb0NsaWVudFJlYWwnLDEsIDEsICdodHRwczpcdTAwMmZcdTAwMmZ0ZWFtcy5tZWRuZXQubWVkLnViYy5jYVx1MDAyZmRvXHUwMDJmbWVkaXRcdTAwMmZ0ZWFtc1x1MDAyZmFwcGxpY2F0aW9uX3NlcnZpY2VzJywgLTEsIC0xLCAnJywgJycpHhhDbGllbnRPbkNsaWNrTmF2aWdhdGVVcmxkHihDbGllbnRPbkNsaWNrU2NyaXB0Q29udGFpbmluZ1ByZWZpeGVkVXJsZB4MSGlkZGVuU2NyaXB0BSFUYWtlT2ZmbGluZURpc2FibGVkKDEsIDEsIC0xLCAtMSlkAgUPFgIfCmhkAgcPFgIfCmhkAgkPFgIfCmhkAgsPFgIfCmhkAg8PFgIfCmhkAhEPFgIfCmhkAhMPFgIfCmhkAhUPFgIfCmhkAhcPZBYCZg8PFgYeHFByZXZpb3VzQXV0aG9yaW5nSXRlbVZlcnNpb25lHhpQcmV2aW91c0F1dGhvcmluZ0l0ZW1Pd25lcmUeHFByZXZpb3VzQXV0aG9yaW5nQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwBkZAIDDw8WCh4JQWNjZXNzS2V5BQEvHg9BcnJvd0ltYWdlV2lkdGgCBR4QQXJyb3dJbWFnZUhlaWdodAIDHhFBcnJvd0ltYWdlT2Zmc2V0WGYeEUFycm93SW1hZ2VPZmZzZXRZAusDZGQCAw9kFgICAQ9kFgICAw9kFgICAQ88KwAFAQAPFgIeD1NpdGVNYXBQcm92aWRlcgURU1BTaXRlTWFwUHJvdmlkZXJkZAIBD2QWBgIDD2QWAmYPZBYCZg8UKwADZAUsaHR0cHM6Ly9teS5tZWRuZXQubWVkLnViYy5jYTo0NDMvUGVyc29uLmFzcHgFIWh0dHBzOi8vbXkubWVkbmV0Lm1lZC51YmMuY2E6NDQzL2QCBQ8PFgQeBFRleHQFHkxhdW5jaCB0aGUgRGV2ZWxvcGVyIERhc2hib2FyZB8KaGRkAgkPZBYCAgEPEBYCHwpoZBQrAQBkAhcPZBYCAgEPZBYCZg9kFgICAg8PZBYGHgVjbGFzcwUibXMtc2J0YWJsZSBtcy1zYnRhYmxlLWV4IHM0LXNlYXJjaB4LY2VsbHBhZGRpbmcFATAeC2NlbGxzcGFjaW5nBQEwZAIbD2QWAmYPDxYCHxgFKTxhIGhyZWY9Jy9kby9tZWRpdCc+VGVhbSBTaXRlIC0gTWVkSVQ8L2E+ZGQCIw9kFgICAQ8WAh8KaGQCJw9kFgICAw8PFgIfCmhkZAIpD2QWBAIFD2QWHAIBD2QWAmYPZBYCAgEPDxYGHxgFF1JlY3VycmluZyBUZWFtIE1lZXRpbmdzHgtOYXZpZ2F0ZVVybGUeBlRhcmdldGVkZAICD2QWAmYPZBYCAgEPDxYGHxgFFUFwcGxpY2F0aW9uIFNlcnZpY2VzIB8cBTcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvQXBwU2VydlRlYW1NZWV0aW5nHx1lZGQCBA9kFgJmD2QWAgIBDw8WBh8YBRhEYXRhIE1hbmFnZW1lbnQgU2VydmljZXMfHAUvL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL2Rtc21lZXRpbmcfHWVkZAIGD2QWAmYPZBYCAgEPDxYGHxgFDFdlYiBTZXJ2aWNlcx8cBTcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvV2ViU2VydlRlYW1NZWV0aW5nHx1lZGQCCQ9kFgJmD2QWAgIBDw8WBh8YBQlMaWJyYXJpZXMfHAVGL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL19sYXlvdXRzL3ZpZXdsc3RzLmFzcHg/QmFzZVR5cGU9MR8dZWRkAgoPZBYCZg9kFgICAQ8PFgofGAUJRG9jdW1lbnRzHxwFPS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9kb2NzL0Zvcm1zL0FsbEl0ZW1zLmFzcHgfHWUeCENzc0NsYXNzBRBzZWxlY3RlZHNlbGVjdGVkHwgCAmRkAgwPZBYCZg9kFgICAQ8PFgYfGAUVU3VwcG9ydCBEb2N1bWVudGF0aW9uHxwFTS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9TdXBwb3J0IERvY3VtZW50YXRpb24vRm9ybXMvQWxsRG9jcy5hc3B4Hx1lZGQCDg9kFgJmD2QWAgIBDw8WBh8YBQRXaWtpHxwFKS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9XaWtpHx1lZGQCEQ9kFgJmD2QWAgIBDw8WBh8YBQVMaXN0cx8cBUYvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvX2xheW91dHMvdmlld2xzdHMuYXNweD9CYXNlVHlwZT0wHx1lZGQCEg9kFgJmD2QWAgIBDw8WBh8YBQ9BY2NvbXBsaXNobWVudHMfHAVIL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0xpc3RzL0FjY29tcGxpc2htZW50cy9BbGxJdGVtcy5hc3B4Hx1lZGQCFA9kFgJmD2QWAgIBDw8WBh8YBQpHb29kIElkZWFzHxwFPi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9pZGVhcy9BbGxJdGVtcy5hc3B4Hx1lZGQCFg9kFgJmD2QWAgIBDw8WBh8YBSVBcHBsaWNhdGlvbnMgd2l0aCBQcml2YWN5IEluZm9ybWF0aW9uHxwFXi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9BcHBsaWNhdGlvbnMgd2l0aCBQcml2YWN5IEluZm9ybWF0aW9uL0FsbEl0ZW1zLmFzcHgfHWVkZAIZD2QWAmYPZBYCAgEPDxYGHxgFFFdvcmsgT3JkZXIgRGFzaGJvYXJkHxwFQi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9Xb3JrIE9yZGVycy9hY3RpdmUuYXNweB8dZWRkAhsPZBYCZg9kFgICAQ8PFgYfGAUIUGljdHVyZXMfHAVXL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL19sYXlvdXRzL3ZpZXdsc3RzLmFzcHg/QmFzZVR5cGU9MSZMaXN0VGVtcGxhdGU9MTA5Hx1lZGQCBw8PFgIfCmhkFgICAw9kFgICAw9kFgICAQ88KwAJAQAPFgIeDU5ldmVyRXhwYW5kZWRnZGQCLw9kFgICAw9kFgICAQ9kFgICAQ9kFgICAQ9kFgRmDxYGHgxGZWF0dXJlU2NvcGUFBFNpdGUeCExvY2F0aW9uBSFNaWNyb3NvZnQuU2hhcmVQb2ludC5TdGFuZGFyZE1lbnUeB0dyb3VwSWQFEFZpZXdTZWxlY3Rvck1lbnUWAgIBDxYCHwpoZAIBDw8WEh4WSG92ZXJBcnJvd0ltYWdlT2Zmc2V0WQLKAh8UAgQeFEhvdmVyQXJyb3dJbWFnZVdpZHRoAgcfFWYfFgLGAh8TAgceFUhvdmVyQXJyb3dJbWFnZUhlaWdodAIEHhZIb3ZlckFycm93SW1hZ2VPZmZzZXRYZh8SBQFXZGQYAQVHY3RsMDAkUGxhY2VIb2xkZXJUb3BOYXZCYXIkUGxhY2VIb2xkZXJIb3Jpem9udGFsTmF2JFRvcE5hdmlnYXRpb25NZW51VjQPD2QFBU1lZElUZG0WHo0qLCzZT6KjWrwqaH8cGYt8" RecordedValue="/wEPDwUBMA9kFgJmD2QWAgIBD2QWAgIDD2QWEAIDD2QWAgUmZ18xOTA3ZWM0ZF8xMjEzXzQ3NzVfODRjNF83MjhhZjY0MDZhZDIQDxYUHgtEZXNjcmlwdGlvbgUYRGVmYXVsdCBkb2N1bWVudCBsaWJyYXJ5HglEaXJlY3Rpb24LKipTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkNvbnRlbnREaXJlY3Rpb24AHgVUaXRsZQUJRG9jdW1lbnRzHgpDaHJvbWVUeXBlZh4MX3ZpZXdDb3VudGVyAobnAR4FV2lkdGgcHhBGaWx0ZXJPcGVyYXRpb25zMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAseBkhlaWdodBweBF8hU0ICgIMIHgtQYXJhbVZhbHVlczLYCwABAAAA/////wEAAAAAAAAADAIAAABYTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwUBAAAAPU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5QYXJhbWV0ZXJOYW1lVmFsdWVIYXNodGFibGUBAAAABV9jb2xsAxxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlAgAAAAkDAAAABAMAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQcAAAAKTG9hZEZhY3RvcgdWZXJzaW9uCENvbXBhcmVyEEhhc2hDb2RlUHJvdmlkZXIISGFzaFNpemUES2V5cwZWYWx1ZXMAAAMDAAUFCwgcU3lzdGVtLkNvbGxlY3Rpb25zLklDb21wYXJlciRTeXN0ZW0uQ29sbGVjdGlvbnMuSUhhc2hDb2RlUHJvdmlkZXII7FE4PxEAAAAKChcAAAAJBAAAAAkFAAAAEAQAAAAMAAAABgYAAAATc2VsZWN0X2Rlc2VsZWN0X2FsbAYHAAAAD05vQW5ub3VuY2VtZW50cwYIAAAACW9wZW5fbWVudQYJAAAADWlkUHJlc0VuYWJsZWQGCgAAAApSb290Rm9sZGVyBgsAAAAKU2VsZWN0ZWRJRAYMAAAAEWR2dF9zdGFydHBvc2l0aW9uBg0AAAAKRmlsdGVyTGluawYOAAAAFE5vQW5ub3VuY2VtZW50c0hvd1RvBg8AAAAQZHZ0X3ByZXZwYWdlZGF0YQYQAAAACkZvbGRlckNUSUQGEQAAABVPcGVuTWVudUtleUFjY2Vzc2libGUQBQAAAAwAAAAGEgAAABxTZWxlY3Qgb3IgZGVzZWxlY3QgYWxsIGl0ZW1zBhMAAABMVGhlcmUgYXJlIG5vIGl0ZW1zIHRvIHNob3cgaW4gdGhpcyB2aWV3IG9mIHRoZSAiRG9jdW1lbnRzIiBkb2N1bWVudCBsaWJyYXJ5LgYUAAAACU9wZW4gTWVudQYVAAAAIFByZXNlbmNlIGVuYWJsZWQgZm9yIHRoaXMgY29sdW1uBhYAAABGL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL2RvY3MvU2hhcmVQb2ludCBIZWFsdGggQ2hlY2sgMjAxMAYXAAAAAi0xBhgAAAAABhkAAACbAT9Sb290Rm9sZGVyPSUyRmRvJTJGbWVkaXQlMkZ0ZWFtcyUyRmFwcGxpY2F0aW9uJTVGc2VydmljZXMlMkZkb2NzJTJGU2hhcmVQb2ludCUyMEhlYWx0aCUyMENoZWNrJTIwMjAxMCZGb2xkZXJDVElEPTB4MDEyMDAwNTJBMjcwRTY5NjRERTY0QkEwOTA1RjI0NjMwRTA4OTUmBhoAAAArVG8gYWRkIGEgbmV3IGl0ZW0sIGNsaWNrICJOZXciIG9yICJVcGxvYWQiLgYbAAAA5QFQYWdlZD1UUlVFJlBhZ2VkUHJldj1UUlVFJnBfU29ydEJlaGF2aW9yPTAmcF9GaWxlTGVhZlJlZj1NZWRJVCUyME9iamVjdGl2ZXMlMjBmb3IlMjBTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMmV4bHN4JnBfSUQ9MTY4JlJvb3RGb2xkZXI9JTJmZG8lMmZtZWRpdCUyZnRlYW1zJTJmYXBwbGljYXRpb24lNWZzZXJ2aWNlcyUyZmRvY3MlMmZTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMjAyMDEwBhwAAAAoMHgwMTIwMDA1MkEyNzBFNjk2NERFNjRCQTA5MDVGMjQ2MzBFMDg5NQYdAAAALlVzZSBTSElGVCtFTlRFUiB0byBvcGVuIHRoZSBtZW51IChuZXcgd2luZG93KS4LZGRkAhEPZBYEZg9kFgQCAQ9kFgJmD2QWBAICD2QWFgIBDxYCHgdWaXNpYmxlaGQCAw8WCB4TQ2xpZW50T25DbGlja1NjcmlwdAWqAWphdmFTY3JpcHQ6Q29yZUludm9rZSgnVGFrZU9mZmxpbmVUb0NsaWVudFJlYWwnLDEsIDEsICdodHRwczpcdTAwMmZcdTAwMmZ0ZWFtcy5tZWRuZXQubWVkLnViYy5jYVx1MDAyZmRvXHUwMDJmbWVkaXRcdTAwMmZ0ZWFtc1x1MDAyZmFwcGxpY2F0aW9uX3NlcnZpY2VzJywgLTEsIC0xLCAnJywgJycpHhhDbGllbnRPbkNsaWNrTmF2aWdhdGVVcmxkHihDbGllbnRPbkNsaWNrU2NyaXB0Q29udGFpbmluZ1ByZWZpeGVkVXJsZB4MSGlkZGVuU2NyaXB0BSFUYWtlT2ZmbGluZURpc2FibGVkKDEsIDEsIC0xLCAtMSlkAgUPFgIfCmhkAgcPFgIfCmhkAgkPFgIfCmhkAgsPFgIfCmhkAg8PFgIfCmhkAhEPFgIfCmhkAhMPFgIfCmhkAhUPFgIfCmhkAhcPZBYCZg8PFgYeHFByZXZpb3VzQXV0aG9yaW5nSXRlbVZlcnNpb25lHhpQcmV2aW91c0F1dGhvcmluZ0l0ZW1Pd25lcmUeHFByZXZpb3VzQXV0aG9yaW5nQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwBkZAIDDw8WCh4JQWNjZXNzS2V5BQEvHg9BcnJvd0ltYWdlV2lkdGgCBR4QQXJyb3dJbWFnZUhlaWdodAIDHhFBcnJvd0ltYWdlT2Zmc2V0WGYeEUFycm93SW1hZ2VPZmZzZXRZAusDZGQCAw9kFgICAQ9kFgICAw9kFgICAQ88KwAFAQAPFgIeD1NpdGVNYXBQcm92aWRlcgURU1BTaXRlTWFwUHJvdmlkZXJkZAIBD2QWBgIDD2QWAmYPZBYCZg8UKwADZAUsaHR0cHM6Ly9teS5tZWRuZXQubWVkLnViYy5jYTo0NDMvUGVyc29uLmFzcHgFIWh0dHBzOi8vbXkubWVkbmV0Lm1lZC51YmMuY2E6NDQzL2QCBQ8PFgQeBFRleHQFHkxhdW5jaCB0aGUgRGV2ZWxvcGVyIERhc2hib2FyZB8KaGRkAgkPZBYCAgEPEBYCHwpoZBQrAQBkAhcPZBYCAgEPZBYCZg9kFgICAg8PZBYGHgVjbGFzcwUibXMtc2J0YWJsZSBtcy1zYnRhYmxlLWV4IHM0LXNlYXJjaB4LY2VsbHBhZGRpbmcFATAeC2NlbGxzcGFjaW5nBQEwZAIbD2QWAmYPDxYCHxgFKTxhIGhyZWY9Jy9kby9tZWRpdCc+VGVhbSBTaXRlIC0gTWVkSVQ8L2E+ZGQCIw9kFgICAQ8WAh8KaGQCJw9kFgICAw8PFgIfCmhkZAIpD2QWBAIFD2QWHAIBD2QWAmYPZBYCAgEPDxYGHxgFF1JlY3VycmluZyBUZWFtIE1lZXRpbmdzHgtOYXZpZ2F0ZVVybGUeBlRhcmdldGVkZAICD2QWAmYPZBYCAgEPDxYGHxgFFUFwcGxpY2F0aW9uIFNlcnZpY2VzIB8cBTcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvQXBwU2VydlRlYW1NZWV0aW5nHx1lZGQCBA9kFgJmD2QWAgIBDw8WBh8YBRhEYXRhIE1hbmFnZW1lbnQgU2VydmljZXMfHAUvL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL2Rtc21lZXRpbmcfHWVkZAIGD2QWAmYPZBYCAgEPDxYGHxgFDFdlYiBTZXJ2aWNlcx8cBTcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvV2ViU2VydlRlYW1NZWV0aW5nHx1lZGQCCQ9kFgJmD2QWAgIBDw8WBh8YBQlMaWJyYXJpZXMfHAVGL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL19sYXlvdXRzL3ZpZXdsc3RzLmFzcHg/QmFzZVR5cGU9MR8dZWRkAgoPZBYCZg9kFgICAQ8PFgofGAUJRG9jdW1lbnRzHxwFPS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9kb2NzL0Zvcm1zL0FsbEl0ZW1zLmFzcHgfHWUeCENzc0NsYXNzBRBzZWxlY3RlZHNlbGVjdGVkHwgCAmRkAgwPZBYCZg9kFgICAQ8PFgYfGAUVU3VwcG9ydCBEb2N1bWVudGF0aW9uHxwFTS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9TdXBwb3J0IERvY3VtZW50YXRpb24vRm9ybXMvQWxsRG9jcy5hc3B4Hx1lZGQCDg9kFgJmD2QWAgIBDw8WBh8YBQRXaWtpHxwFKS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9XaWtpHx1lZGQCEQ9kFgJmD2QWAgIBDw8WBh8YBQVMaXN0cx8cBUYvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvX2xheW91dHMvdmlld2xzdHMuYXNweD9CYXNlVHlwZT0wHx1lZGQCEg9kFgJmD2QWAgIBDw8WBh8YBQ9BY2NvbXBsaXNobWVudHMfHAVIL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0xpc3RzL0FjY29tcGxpc2htZW50cy9BbGxJdGVtcy5hc3B4Hx1lZGQCFA9kFgJmD2QWAgIBDw8WBh8YBQpHb29kIElkZWFzHxwFPi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9pZGVhcy9BbGxJdGVtcy5hc3B4Hx1lZGQCFg9kFgJmD2QWAgIBDw8WBh8YBSVBcHBsaWNhdGlvbnMgd2l0aCBQcml2YWN5IEluZm9ybWF0aW9uHxwFXi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9BcHBsaWNhdGlvbnMgd2l0aCBQcml2YWN5IEluZm9ybWF0aW9uL0FsbEl0ZW1zLmFzcHgfHWVkZAIZD2QWAmYPZBYCAgEPDxYGHxgFFFdvcmsgT3JkZXIgRGFzaGJvYXJkHxwFQi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9Xb3JrIE9yZGVycy9hY3RpdmUuYXNweB8dZWRkAhsPZBYCZg9kFgICAQ8PFgYfGAUIUGljdHVyZXMfHAVXL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL19sYXlvdXRzL3ZpZXdsc3RzLmFzcHg/QmFzZVR5cGU9MSZMaXN0VGVtcGxhdGU9MTA5Hx1lZGQCBw8PFgIfCmhkFgICAw9kFgICAw9kFgICAQ88KwAJAQAPFgIeDU5ldmVyRXhwYW5kZWRnZGQCLw9kFgICAw9kFgICAQ9kFgICAQ9kFgICAQ9kFgRmDxYGHgxGZWF0dXJlU2NvcGUFBFNpdGUeCExvY2F0aW9uBSFNaWNyb3NvZnQuU2hhcmVQb2ludC5TdGFuZGFyZE1lbnUeB0dyb3VwSWQFEFZpZXdTZWxlY3Rvck1lbnUWAgIBDxYCHwpoZAIBDw8WEh4WSG92ZXJBcnJvd0ltYWdlT2Zmc2V0WQLKAh8UAgQeFEhvdmVyQXJyb3dJbWFnZVdpZHRoAgcfFWYfFgLGAh8TAgceFUhvdmVyQXJyb3dJbWFnZUhlaWdodAIEHhZIb3ZlckFycm93SW1hZ2VPZmZzZXRYZh8SBQFXZGQYAQVHY3RsMDAkUGxhY2VIb2xkZXJUb3BOYXZCYXIkUGxhY2VIb2xkZXJIb3Jpem9udGFsTmF2JFRvcE5hdmlnYXRpb25NZW51VjQPD2QFBU1lZElUZG0WHo0qLCzZT6KjWrwqaH8cGYt8" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__SCROLLPOSITIONX" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__SCROLLPOSITIONY" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__EVENTVALIDATION" Value="/wEWCgLM5umtDwLQn5bCCwLriLTXBQK/tuqZBQKotqKDBgLchIGUAgLchIGUAgLchIGUAgLchIGUAgKwsq+DCxd1VtdIlWAvNbdh693wMgCZLZqR" RecordedValue="/wEWCgLM5umtDwLQn5bCCwLriLTXBQK/tuqZBQKotqKDBgLchIGUAgLchIGUAgLchIGUAgLchIGUAgKwsq+DCxd1VtdIlWAvNbdh693wMgCZLZqR" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$ctl34" Value="Ribbon.Library" RecordedValue="Ribbon.Library" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_ShowSettings" Value="{{$HIDDEN1.MSOTlPn_ShowSettings}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN1.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN1.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0xDB8FE6C17CEF657D3EA9D85A4B258554726B75DABC7FF5CD6820D00DCEF4BC23AF67C002055A45FE1554B80D33B0E956011A3F4DD4CADD5405BD8D580B45EE35,16 Sep 2014 17:42:48 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_LayoutChanges" Value="{{$HIDDEN1.MSOLayout_LayoutChanges}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOLayout_InDesignMode" Value="{{$HIDDEN1.MSOLayout_InDesignMode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wpSelected" Value="{{$HIDDEN1._wpSelected}}" RecordedValue="MSOZoneCell_WebPartWPQ2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_wzSelected" Value="{{$HIDDEN1._wzSelected}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_OldDisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_OldDisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTo5NTU1ZTI3NS05YmIzLTRiMjEtYmNjZi1mODBhMjg3NWQ0MzgYAQVHY3RsMDAkUGxhY2VIb2xkZXJUb3BOYXZCYXIkUGxhY2VIb2xkZXJIb3Jpem9udGFsTmF2JFRvcE5hdmlnYXRpb25NZW51VjRkyHBXe2kIvewbciHeTOkpZxWdYm5a/JirNGOD9sX0tJ0=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="B8ECB702" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAjy+lDfxpFC0Ga5maTRjCtxXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGrmsZgZTSa1X+yeoGTD2kFS5FL1GIegm76M9HUGp6832" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="Ribbon.Library" RecordedValue="Ribbon.Library" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="_wpcmWpid" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="wpcmVal" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="POST" Guid="81bd8666-cd04-4a21-bfb4-b54793516b7a" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="5253e1d7-f8ee-46ae-81e9-3b2de18183e6" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?ShowInGrid=True&amp;View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
-      <ExtractionRules>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
-          <RuleParameters>
-            <RuleParameter Name="Required" Value="True" />
-            <RuleParameter Name="HtmlDecode" Value="True" />
-          </RuleParameters>
-        </ExtractionRule>
-      </ExtractionRules>
       <CorrelationExtractionRules>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam8.InitialTabId" DisplayName="" Description="">
-          <RuleParameters>
-            <RuleParameter Name="StartsWith" Value="&amp;amp;InitialTabId=" />
-            <RuleParameter Name="EndsWith" Value="&amp;" />
-            <RuleParameter Name="Index" Value="1" />
-            <RuleParameter Name="IgnoreCase" Value="False" />
-            <RuleParameter Name="UseRegularExpression" Value="False" />
-            <RuleParameter Name="HtmlDecode" Value="True" />
-            <RuleParameter Name="Required" Value="False" />
-          </RuleParameters>
-        </ExtractionRule>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam9.VisibilityContext" DisplayName="" Description="">
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam89.VisibilityContext" DisplayName="" Description="">
           <RuleParameters>
             <RuleParameter Name="StartsWith" Value="&amp;amp;VisibilityContext=" />
             <RuleParameter Name="EndsWith" Value="&quot;" />
@@ -178,13 +482,15 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
       <QueryStringParameters>
-        <QueryStringParameter Name="ShowInGrid" Value="True" RecordedValue="True" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
         <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
-        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam13.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam12.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ShowInGrid" Value="HTML" RecordedValue="HTML" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
         <QueryStringParameter Name="InitialTabId" Value="Ribbon%2ELibrary" RecordedValue="Ribbon%2ELibrary" CorrelationBinding="{{QueryStringParam14.InitialTabId}}" UrlEncode="False" UseToGroupResults="False" />
         <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="{{QueryStringParam15.VisibilityContext}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
       <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
@@ -194,7 +500,7 @@
         <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x3FB1B5A228493C69F709947A0C1913BCD306AC728073593A1FFE4419751A4ADAEC6F96832E71DD2D6FD6748516C99384B9FD93B87945AA9B98379A60D7FD3679,16 Sep 2014 17:27:38 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x07AD619E7DEA7FCE44713B921C5DA185938CF5BF24299F01FE3DAC853027CDCB106E225EEDEF208F6A8ACD053681F262B9723678273474FA313CE47CC06978F3,16 Sep 2014 17:42:52 -0000" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
@@ -206,24 +512,72 @@
         <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPDwUBMA9kFgJmD2QWAgIBD2QWAgIDD2QWEAIDD2QWAgUmZ18xOTA3ZWM0ZF8xMjEzXzQ3NzVfODRjNF83MjhhZjY0MDZhZDIQDxYUHgtEZXNjcmlwdGlvbgUYRGVmYXVsdCBkb2N1bWVudCBsaWJyYXJ5HglEaXJlY3Rpb24LKipTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkNvbnRlbnREaXJlY3Rpb24AHgVUaXRsZQUJRG9jdW1lbnRzHgpDaHJvbWVUeXBlZh4MX3ZpZXdDb3VudGVyAobnAR4FV2lkdGgcHhBGaWx0ZXJPcGVyYXRpb25zMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAseBkhlaWdodBweBF8hU0ICgIMIHgtQYXJhbVZhbHVlczLYCwABAAAA/////wEAAAAAAAAADAIAAABYTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwUBAAAAPU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5QYXJhbWV0ZXJOYW1lVmFsdWVIYXNodGFibGUBAAAABV9jb2xsAxxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlAgAAAAkDAAAABAMAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQcAAAAKTG9hZEZhY3RvcgdWZXJzaW9uCENvbXBhcmVyEEhhc2hDb2RlUHJvdmlkZXIISGFzaFNpemUES2V5cwZWYWx1ZXMAAAMDAAUFCwgcU3lzdGVtLkNvbGxlY3Rpb25zLklDb21wYXJlciRTeXN0ZW0uQ29sbGVjdGlvbnMuSUhhc2hDb2RlUHJvdmlkZXII7FE4PxcAAAAKChcAAAAJBAAAAAkFAAAAEAQAAAAMAAAABgYAAAATc2VsZWN0X2Rlc2VsZWN0X2FsbAYHAAAAClNlbGVjdGVkSUQGCAAAAA9Ob0Fubm91bmNlbWVudHMGCQAAAAlvcGVuX21lbnUGCgAAAA1pZFByZXNFbmFibGVkBgsAAAAKUm9vdEZvbGRlcgYMAAAAEWR2dF9zdGFydHBvc2l0aW9uBg0AAAAKRmlsdGVyTGluawYOAAAAFE5vQW5ub3VuY2VtZW50c0hvd1RvBg8AAAAQZHZ0X3ByZXZwYWdlZGF0YQYQAAAACkZvbGRlckNUSUQGEQAAABVPcGVuTWVudUtleUFjY2Vzc2libGUQBQAAAAwAAAAGEgAAABxTZWxlY3Qgb3IgZGVzZWxlY3QgYWxsIGl0ZW1zBhMAAAACLTEGFAAAAExUaGVyZSBhcmUgbm8gaXRlbXMgdG8gc2hvdyBpbiB0aGlzIHZpZXcgb2YgdGhlICJEb2N1bWVudHMiIGRvY3VtZW50IGxpYnJhcnkuBhUAAAAJT3BlbiBNZW51BhYAAAAgUHJlc2VuY2UgZW5hYmxlZCBmb3IgdGhpcyBjb2x1bW4GFwAAAEYvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvZG9jcy9TaGFyZVBvaW50IEhlYWx0aCBDaGVjayAyMDEwBhgAAAAABhkAAACbAT9Sb290Rm9sZGVyPSUyRmRvJTJGbWVkaXQlMkZ0ZWFtcyUyRmFwcGxpY2F0aW9uJTVGc2VydmljZXMlMkZkb2NzJTJGU2hhcmVQb2ludCUyMEhlYWx0aCUyMENoZWNrJTIwMjAxMCZGb2xkZXJDVElEPTB4MDEyMDAwNTJBMjcwRTY5NjRERTY0QkEwOTA1RjI0NjMwRTA4OTUmBhoAAAArVG8gYWRkIGEgbmV3IGl0ZW0sIGNsaWNrICJOZXciIG9yICJVcGxvYWQiLgYbAAAA5QFQYWdlZD1UUlVFJlBhZ2VkUHJldj1UUlVFJnBfU29ydEJlaGF2aW9yPTAmcF9GaWxlTGVhZlJlZj1NZWRJVCUyME9iamVjdGl2ZXMlMjBmb3IlMjBTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMmV4bHN4JnBfSUQ9MTY4JlJvb3RGb2xkZXI9JTJmZG8lMmZtZWRpdCUyZnRlYW1zJTJmYXBwbGljYXRpb24lNWZzZXJ2aWNlcyUyZmRvY3MlMmZTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMjAyMDEwBhwAAAAoMHgwMTIwMDA1MkEyNzBFNjk2NERFNjRCQTA5MDVGMjQ2MzBFMDg5NQYdAAAALlVzZSBTSElGVCtFTlRFUiB0byBvcGVuIHRoZSBtZW51IChuZXcgd2luZG93KS4LZGRkAhEPZBYEZg9kFgQCAQ9kFgJmD2QWBAICD2QWFgIBDxYCHgdWaXNpYmxlaGQCAw8WCB4TQ2xpZW50T25DbGlja1NjcmlwdAWqAWphdmFTY3JpcHQ6Q29yZUludm9rZSgnVGFrZU9mZmxpbmVUb0NsaWVudFJlYWwnLDEsIDEsICdodHRwczpcdTAwMmZcdTAwMmZ0ZWFtcy5tZWRuZXQubWVkLnViYy5jYVx1MDAyZmRvXHUwMDJmbWVkaXRcdTAwMmZ0ZWFtc1x1MDAyZmFwcGxpY2F0aW9uX3NlcnZpY2VzJywgLTEsIC0xLCAnJywgJycpHhhDbGllbnRPbkNsaWNrTmF2aWdhdGVVcmxkHihDbGllbnRPbkNsaWNrU2NyaXB0Q29udGFpbmluZ1ByZWZpeGVkVXJsZB4MSGlkZGVuU2NyaXB0BSFUYWtlT2ZmbGluZURpc2FibGVkKDEsIDEsIC0xLCAtMSlkAgUPFgIfCmhkAgcPFgIfCmhkAgkPFgIfCmhkAgsPFgIfCmhkAg8PFgIfCmhkAhEPFgIfCmhkAhMPFgIfCmhkAhUPFgIfCmhkAhcPZBYCZg8PFgYeHFByZXZpb3VzQXV0aG9yaW5nSXRlbVZlcnNpb25lHhpQcmV2aW91c0F1dGhvcmluZ0l0ZW1Pd25lcmUeHFByZXZpb3VzQXV0aG9yaW5nQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwBkZAIDDw8WCh4JQWNjZXNzS2V5BQEvHg9BcnJvd0ltYWdlV2lkdGgCBR4QQXJyb3dJbWFnZUhlaWdodAIDHhFBcnJvd0ltYWdlT2Zmc2V0WGYeEUFycm93SW1hZ2VPZmZzZXRZAusDZGQCAw9kFgICAQ9kFgICAw9kFgICAQ88KwAFAQAPFgIeD1NpdGVNYXBQcm92aWRlcgURU1BTaXRlTWFwUHJvdmlkZXJkZAIBD2QWBgIDD2QWAmYPZBYCZg8UKwADZAUsaHR0cHM6Ly9teS5tZWRuZXQubWVkLnViYy5jYTo0NDMvUGVyc29uLmFzcHgFIWh0dHBzOi8vbXkubWVkbmV0Lm1lZC51YmMuY2E6NDQzL2QCBQ8PFgQeBFRleHQFHkxhdW5jaCB0aGUgRGV2ZWxvcGVyIERhc2hib2FyZB8KaGRkAgkPZBYCAgEPEBYCHwpoZBQrAQBkAhcPZBYCAgEPZBYCZg9kFgICAg8PZBYGHgVjbGFzcwUibXMtc2J0YWJsZSBtcy1zYnRhYmxlLWV4IHM0LXNlYXJjaB4LY2VsbHBhZGRpbmcFATAeC2NlbGxzcGFjaW5nBQEwZAIbD2QWAmYPDxYCHxgFKTxhIGhyZWY9Jy9kby9tZWRpdCc+VGVhbSBTaXRlIC0gTWVkSVQ8L2E+ZGQCIw9kFgICAQ8WAh8KaGQCJw9kFgICAw8PFgIfCmhkZAIpD2QWBAIFD2QWHAIBD2QWAmYPZBYCAgEPDxYGHxgFF1JlY3VycmluZyBUZWFtIE1lZXRpbmdzHgtOYXZpZ2F0ZVVybGUeBlRhcmdldGVkZAICD2QWAmYPZBYCAgEPDxYGHxgFFUFwcGxpY2F0aW9uIFNlcnZpY2VzIB8cBTcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvQXBwU2VydlRlYW1NZWV0aW5nHx1lZGQCBA9kFgJmD2QWAgIBDw8WBh8YBRhEYXRhIE1hbmFnZW1lbnQgU2VydmljZXMfHAUvL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL2Rtc21lZXRpbmcfHWVkZAIGD2QWAmYPZBYCAgEPDxYGHxgFDFdlYiBTZXJ2aWNlcx8cBTcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvV2ViU2VydlRlYW1NZWV0aW5nHx1lZGQCCQ9kFgJmD2QWAgIBDw8WBh8YBQlMaWJyYXJpZXMfHAVGL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL19sYXlvdXRzL3ZpZXdsc3RzLmFzcHg/QmFzZVR5cGU9MR8dZWRkAgoPZBYCZg9kFgICAQ8PFgofGAUJRG9jdW1lbnRzHxwFPS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9kb2NzL0Zvcm1zL0FsbEl0ZW1zLmFzcHgfHWUeCENzc0NsYXNzBRhzZWxlY3RlZHNlbGVjdGVkc2VsZWN0ZWQfCAICZGQCDA9kFgJmD2QWAgIBDw8WBh8YBRVTdXBwb3J0IERvY3VtZW50YXRpb24fHAVNL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL1N1cHBvcnQgRG9jdW1lbnRhdGlvbi9Gb3Jtcy9BbGxEb2NzLmFzcHgfHWVkZAIOD2QWAmYPZBYCAgEPDxYGHxgFBFdpa2kfHAUpL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL1dpa2kfHWVkZAIRD2QWAmYPZBYCAgEPDxYGHxgFBUxpc3RzHxwFRi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9fbGF5b3V0cy92aWV3bHN0cy5hc3B4P0Jhc2VUeXBlPTAfHWVkZAISD2QWAmYPZBYCAgEPDxYGHxgFD0FjY29tcGxpc2htZW50cx8cBUgvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvTGlzdHMvQWNjb21wbGlzaG1lbnRzL0FsbEl0ZW1zLmFzcHgfHWVkZAIUD2QWAmYPZBYCAgEPDxYGHxgFCkdvb2QgSWRlYXMfHAU+L2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0xpc3RzL2lkZWFzL0FsbEl0ZW1zLmFzcHgfHWVkZAIWD2QWAmYPZBYCAgEPDxYGHxgFJUFwcGxpY2F0aW9ucyB3aXRoIFByaXZhY3kgSW5mb3JtYXRpb24fHAVeL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0xpc3RzL0FwcGxpY2F0aW9ucyB3aXRoIFByaXZhY3kgSW5mb3JtYXRpb24vQWxsSXRlbXMuYXNweB8dZWRkAhkPZBYCZg9kFgICAQ8PFgYfGAUUV29yayBPcmRlciBEYXNoYm9hcmQfHAVCL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0xpc3RzL1dvcmsgT3JkZXJzL2FjdGl2ZS5hc3B4Hx1lZGQCGw9kFgJmD2QWAgIBDw8WBh8YBQhQaWN0dXJlcx8cBVcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvX2xheW91dHMvdmlld2xzdHMuYXNweD9CYXNlVHlwZT0xJkxpc3RUZW1wbGF0ZT0xMDkfHWVkZAIHDw8WAh8KaGQWAgIDD2QWAgIDD2QWAgIBDzwrAAkBAA8WAh4NTmV2ZXJFeHBhbmRlZGdkZAIvD2QWAgIDD2QWAgIBD2QWAgIBD2QWAgIBD2QWBGYPFgYeDEZlYXR1cmVTY29wZQUEU2l0ZR4ITG9jYXRpb24FIU1pY3Jvc29mdC5TaGFyZVBvaW50LlN0YW5kYXJkTWVudR4HR3JvdXBJZAUQVmlld1NlbGVjdG9yTWVudRYCAgEPFgIfCmhkAgEPDxYSHhZIb3ZlckFycm93SW1hZ2VPZmZzZXRZAsoCHxQCBB4USG92ZXJBcnJvd0ltYWdlV2lkdGgCBx8VZh8WAsYCHxMCBx4VSG92ZXJBcnJvd0ltYWdlSGVpZ2h0AgQeFkhvdmVyQXJyb3dJbWFnZU9mZnNldFhmHxIFAVdkZBgBBUdjdGwwMCRQbGFjZUhvbGRlclRvcE5hdkJhciRQbGFjZUhvbGRlckhvcml6b250YWxOYXYkVG9wTmF2aWdhdGlvbk1lbnVWNA8PZAUFTWVkSVRk7oK+x2P0rauxu2XPnqulO7FdQCo=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleToxNmQ5ODdjMi05OGJhLTQ5ZDktOWQ1YS1lYWJmZDE3NDU5MTAYAQVHY3RsMDAkUGxhY2VIb2xkZXJUb3BOYXZCYXIkUGxhY2VIb2xkZXJIb3Jpem9udGFsTmF2JFRvcE5hdmlnYXRpb25NZW51VjRk3ir/NtNky11foyvO9nhJ6jhQAGmP0T6krGNqBf3ZBUY=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="B8ECB702" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEWCgL66N2pAQLQn5bCCwLriLTXBQK/tuqZBQKotqKDBgLchIGUAgLchIGUAgLchIGUAgLchIGUAgKwsq+DC6DwsnsE8lyW8hd1eQL37vNE6slM" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$ctl34" Value="{{$HIDDEN1.ctl00$ctl34}}" RecordedValue="Ribbon.Library" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAhTcphpnSWqRXvrcVmRPhTTXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGlsMnF6iR7p1K5BcM0oLzVh5hhHWGqlX+tZTZpg29V8s" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="{{$HIDDEN1.ctl00$ctl35}}" RecordedValue="Ribbon.Library" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="POST" Guid="ddd9326a-bcbd-4d7e-a14a-81d99235bee7" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="f74fa794-f88f-450a-a28f-f6eb56dfc9ee" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?ShowInGrid=True&amp;View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;ShowInGrid=HTML&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="d7db4a9b-0044-41d7-9c72-7b753338866a" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/2013-09-11%2011_05_09-Home%20-%20Central%20Administration.png" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="9d8ec5fc-ce5e-46fb-9d7c-59278283c19b" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/favicon.ico" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="48f3a389-1ddb-4e80-972f-b8fe77dfdba1" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="Windows-1252" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;ShowInGrid=HTML&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam6.RootFolder" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?RootFolder=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="48" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam7.FolderCTID" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="&amp;amp;FolderCTID=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="1c1f97e4-74dd-4d50-b680-c14f887b2f32" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
       </Headers>
       <ExtractionRules>
         <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.SharePointExtractListViewWebPartScriptValues, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="ListID1" DisplayName="SharePoint - Extract WebParts ListView Values" Description="Extracts all values from the script portion of webpart list view in the response using the list title as the search criteria.">
@@ -251,16 +605,16 @@
           <RuleParameters>
             <RuleParameter Name="StartsWith" Value="?RootFolder=" />
             <RuleParameter Name="EndsWith" Value="&amp;" />
-            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="Index" Value="2" />
             <RuleParameter Name="IgnoreCase" Value="False" />
             <RuleParameter Name="UseRegularExpression" Value="False" />
             <RuleParameter Name="HtmlDecode" Value="True" />
             <RuleParameter Name="Required" Value="False" />
           </RuleParameters>
         </ExtractionRule>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam2.ShowInGrid" DisplayName="" Description="">
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam2.FolderCTID" DisplayName="" Description="">
           <RuleParameters>
-            <RuleParameter Name="StartsWith" Value="&amp;amp;ShowInGrid=" />
+            <RuleParameter Name="StartsWith" Value="&amp;amp;FolderCTID=" />
             <RuleParameter Name="EndsWith" Value="&amp;" />
             <RuleParameter Name="Index" Value="0" />
             <RuleParameter Name="IgnoreCase" Value="False" />
@@ -280,7 +634,7 @@
             <RuleParameter Name="Required" Value="False" />
           </RuleParameters>
         </ExtractionRule>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.ctl00$ctl34" DisplayName="" Description="">
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.ctl00$ctl35" DisplayName="" Description="">
           <RuleParameters>
             <RuleParameter Name="StartsWith" Value="d = &quot;" />
             <RuleParameter Name="EndsWith" Value="&quot;;_sp" />
@@ -291,18 +645,18 @@
             <RuleParameter Name="Required" Value="False" />
           </RuleParameters>
         </ExtractionRule>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam25.RootFolder" DisplayName="" Description="">
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam98.RootFolder" DisplayName="" Description="">
           <RuleParameters>
             <RuleParameter Name="StartsWith" Value="?RootFolder=" />
             <RuleParameter Name="EndsWith" Value="&amp;" />
-            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="Index" Value="2" />
             <RuleParameter Name="IgnoreCase" Value="False" />
             <RuleParameter Name="UseRegularExpression" Value="False" />
             <RuleParameter Name="HtmlDecode" Value="True" />
             <RuleParameter Name="Required" Value="False" />
           </RuleParameters>
         </ExtractionRule>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam26.Type" DisplayName="" Description="">
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam99.Type" DisplayName="" Description="">
           <RuleParameters>
             <RuleParameter Name="StartsWith" Value="\u0026Type=" />
             <RuleParameter Name="EndsWith" Value="\" />
@@ -336,13 +690,15 @@
         </RequestPlugin>
       </RequestPlugins>
       <QueryStringParameters>
-        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
-        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam23.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="ShowInGrid" Value="HTML" RecordedValue="HTML" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="InitialTabId" Value="Ribbon%2ELibrary" RecordedValue="Ribbon%2ELibrary" CorrelationBinding="{{QueryStringParam8.InitialTabId}}" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="{{QueryStringParam9.VisibilityContext}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam6.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FolderCTID" Value="0x01200052A270E6964DE64BA0905F24630E0895" RecordedValue="0x01200052A270E6964DE64BA0905F24630E0895" CorrelationBinding="{{QueryStringParam7.FolderCTID}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="{1907EC4D-1213-4775-84C4-728AF6406AD2}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="InitialTabId" Value="Ribbon%2ERead" RecordedValue="Ribbon%2ERead" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="{{QueryStringParam89.VisibilityContext}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
       <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
@@ -352,7 +708,7 @@
         <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x8B0CBADF35D5BF1B408AAA569F6EDF6D7944D5CC1F180A5915A03CB1A80B57BE0BECBD86850715ABFD513914196BD3BF185684F56771770D1EC341B09009E06F,16 Sep 2014 17:28:27 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0x5D72D2975A8E97400CFDABCE22685EA26AFAB814D7C02A282E9B7D6555C50676F37A9E832E86A0BB63B6C8571D07A1DECAAED897999FCA27FA038FF5DB9FF382,16 Sep 2014 17:43:00 -0000" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
@@ -364,24 +720,24 @@
         <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPDwUBMA9kFgJmD2QWAgIBD2QWAgIDD2QWEAIDD2QWAgUmZ18xOTA3ZWM0ZF8xMjEzXzQ3NzVfODRjNF83MjhhZjY0MDZhZDIQDxYUHgtEZXNjcmlwdGlvbgUYRGVmYXVsdCBkb2N1bWVudCBsaWJyYXJ5HglEaXJlY3Rpb24LKipTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkNvbnRlbnREaXJlY3Rpb24AHgVUaXRsZQUJRG9jdW1lbnRzHgpDaHJvbWVUeXBlZh4MX3ZpZXdDb3VudGVyAobnAR4FV2lkdGgcHhBGaWx0ZXJPcGVyYXRpb25zMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAseBkhlaWdodBweBF8hU0ICgIMIHgtQYXJhbVZhbHVlczLYCwABAAAA/////wEAAAAAAAAADAIAAABYTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwUBAAAAPU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5QYXJhbWV0ZXJOYW1lVmFsdWVIYXNodGFibGUBAAAABV9jb2xsAxxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlAgAAAAkDAAAABAMAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQcAAAAKTG9hZEZhY3RvcgdWZXJzaW9uCENvbXBhcmVyEEhhc2hDb2RlUHJvdmlkZXIISGFzaFNpemUES2V5cwZWYWx1ZXMAAAMDAAUFCwgcU3lzdGVtLkNvbGxlY3Rpb25zLklDb21wYXJlciRTeXN0ZW0uQ29sbGVjdGlvbnMuSUhhc2hDb2RlUHJvdmlkZXII7FE4PxcAAAAKChcAAAAJBAAAAAkFAAAAEAQAAAAMAAAABgYAAAATc2VsZWN0X2Rlc2VsZWN0X2FsbAYHAAAAD05vQW5ub3VuY2VtZW50cwYIAAAACW9wZW5fbWVudQYJAAAADWlkUHJlc0VuYWJsZWQGCgAAAApSb290Rm9sZGVyBgsAAAAKU2VsZWN0ZWRJRAYMAAAAEWR2dF9zdGFydHBvc2l0aW9uBg0AAAAKRmlsdGVyTGluawYOAAAAFE5vQW5ub3VuY2VtZW50c0hvd1RvBg8AAAAQZHZ0X3ByZXZwYWdlZGF0YQYQAAAACkZvbGRlckNUSUQGEQAAABVPcGVuTWVudUtleUFjY2Vzc2libGUQBQAAAAwAAAAGEgAAABxTZWxlY3Qgb3IgZGVzZWxlY3QgYWxsIGl0ZW1zBhMAAABMVGhlcmUgYXJlIG5vIGl0ZW1zIHRvIHNob3cgaW4gdGhpcyB2aWV3IG9mIHRoZSAiRG9jdW1lbnRzIiBkb2N1bWVudCBsaWJyYXJ5LgYUAAAACU9wZW4gTWVudQYVAAAAIFByZXNlbmNlIGVuYWJsZWQgZm9yIHRoaXMgY29sdW1uBhYAAABGL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL2RvY3MvU2hhcmVQb2ludCBIZWFsdGggQ2hlY2sgMjAxMAYXAAAAAi0xBhgAAAAABhkAAACbAT9Sb290Rm9sZGVyPSUyRmRvJTJGbWVkaXQlMkZ0ZWFtcyUyRmFwcGxpY2F0aW9uJTVGc2VydmljZXMlMkZkb2NzJTJGU2hhcmVQb2ludCUyMEhlYWx0aCUyMENoZWNrJTIwMjAxMCZGb2xkZXJDVElEPTB4MDEyMDAwNTJBMjcwRTY5NjRERTY0QkEwOTA1RjI0NjMwRTA4OTUmBhoAAAArVG8gYWRkIGEgbmV3IGl0ZW0sIGNsaWNrICJOZXciIG9yICJVcGxvYWQiLgYbAAAA5QFQYWdlZD1UUlVFJlBhZ2VkUHJldj1UUlVFJnBfU29ydEJlaGF2aW9yPTAmcF9GaWxlTGVhZlJlZj1NZWRJVCUyME9iamVjdGl2ZXMlMjBmb3IlMjBTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMmV4bHN4JnBfSUQ9MTY4JlJvb3RGb2xkZXI9JTJmZG8lMmZtZWRpdCUyZnRlYW1zJTJmYXBwbGljYXRpb24lNWZzZXJ2aWNlcyUyZmRvY3MlMmZTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMjAyMDEwBhwAAAAoMHgwMTIwMDA1MkEyNzBFNjk2NERFNjRCQTA5MDVGMjQ2MzBFMDg5NQYdAAAALlVzZSBTSElGVCtFTlRFUiB0byBvcGVuIHRoZSBtZW51IChuZXcgd2luZG93KS4LZGRkAhEPZBYEZg9kFgQCAQ9kFgJmD2QWBAICD2QWFgIBDxYCHgdWaXNpYmxlaGQCAw8WCB4TQ2xpZW50T25DbGlja1NjcmlwdAWqAWphdmFTY3JpcHQ6Q29yZUludm9rZSgnVGFrZU9mZmxpbmVUb0NsaWVudFJlYWwnLDEsIDEsICdodHRwczpcdTAwMmZcdTAwMmZ0ZWFtcy5tZWRuZXQubWVkLnViYy5jYVx1MDAyZmRvXHUwMDJmbWVkaXRcdTAwMmZ0ZWFtc1x1MDAyZmFwcGxpY2F0aW9uX3NlcnZpY2VzJywgLTEsIC0xLCAnJywgJycpHhhDbGllbnRPbkNsaWNrTmF2aWdhdGVVcmxkHihDbGllbnRPbkNsaWNrU2NyaXB0Q29udGFpbmluZ1ByZWZpeGVkVXJsZB4MSGlkZGVuU2NyaXB0BSFUYWtlT2ZmbGluZURpc2FibGVkKDEsIDEsIC0xLCAtMSlkAgUPFgIfCmhkAgcPFgIfCmhkAgkPFgIfCmhkAgsPFgIfCmhkAg8PFgIfCmhkAhEPFgIfCmhkAhMPFgIfCmhkAhUPFgIfCmhkAhcPZBYCZg8PFgYeHFByZXZpb3VzQXV0aG9yaW5nSXRlbVZlcnNpb25lHhpQcmV2aW91c0F1dGhvcmluZ0l0ZW1Pd25lcmUeHFByZXZpb3VzQXV0aG9yaW5nQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwBkZAIDDw8WCh4JQWNjZXNzS2V5BQEvHg9BcnJvd0ltYWdlV2lkdGgCBR4QQXJyb3dJbWFnZUhlaWdodAIDHhFBcnJvd0ltYWdlT2Zmc2V0WGYeEUFycm93SW1hZ2VPZmZzZXRZAusDZGQCAw9kFgICAQ9kFgICAw9kFgICAQ88KwAFAQAPFgIeD1NpdGVNYXBQcm92aWRlcgURU1BTaXRlTWFwUHJvdmlkZXJkZAIBD2QWBgIDD2QWAmYPZBYCZg8UKwADZAUsaHR0cHM6Ly9teS5tZWRuZXQubWVkLnViYy5jYTo0NDMvUGVyc29uLmFzcHgFIWh0dHBzOi8vbXkubWVkbmV0Lm1lZC51YmMuY2E6NDQzL2QCBQ8PFgQeBFRleHQFHkxhdW5jaCB0aGUgRGV2ZWxvcGVyIERhc2hib2FyZB8KaGRkAgkPZBYCAgEPEBYCHwpoZBQrAQBkAhcPZBYCAgEPZBYCZg9kFgICAg8PZBYGHgVjbGFzcwUibXMtc2J0YWJsZSBtcy1zYnRhYmxlLWV4IHM0LXNlYXJjaB4LY2VsbHBhZGRpbmcFATAeC2NlbGxzcGFjaW5nBQEwZAIbD2QWAmYPDxYCHxgFKTxhIGhyZWY9Jy9kby9tZWRpdCc+VGVhbSBTaXRlIC0gTWVkSVQ8L2E+ZGQCIw9kFgICAQ8WAh8KaGQCJw9kFgICAw8PFgIfCmhkZAIpD2QWBAIFD2QWHAIBD2QWAmYPZBYCAgEPDxYGHxgFF1JlY3VycmluZyBUZWFtIE1lZXRpbmdzHgtOYXZpZ2F0ZVVybGUeBlRhcmdldGVkZAICD2QWAmYPZBYCAgEPDxYGHxgFFUFwcGxpY2F0aW9uIFNlcnZpY2VzIB8cBTcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvQXBwU2VydlRlYW1NZWV0aW5nHx1lZGQCBA9kFgJmD2QWAgIBDw8WBh8YBRhEYXRhIE1hbmFnZW1lbnQgU2VydmljZXMfHAUoL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL1RJTR8dZWRkAgYPZBYCZg9kFgICAQ8PFgYfGAUMV2ViIFNlcnZpY2VzHxwFNy9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9XZWJTZXJ2VGVhbU1lZXRpbmcfHWVkZAIJD2QWAmYPZBYCAgEPDxYGHxgFCUxpYnJhcmllcx8cBUYvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvX2xheW91dHMvdmlld2xzdHMuYXNweD9CYXNlVHlwZT0xHx1lZGQCCg9kFgJmD2QWAgIBDw8WCh8YBQlEb2N1bWVudHMfHAU9L2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL2RvY3MvRm9ybXMvQWxsSXRlbXMuYXNweB8dZR4IQ3NzQ2xhc3MFIHNlbGVjdGVkc2VsZWN0ZWRzZWxlY3RlZHNlbGVjdGVkHwgCAmRkAgwPZBYCZg9kFgICAQ8PFgYfGAUVU3VwcG9ydCBEb2N1bWVudGF0aW9uHxwFTS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9TdXBwb3J0IERvY3VtZW50YXRpb24vRm9ybXMvQWxsRG9jcy5hc3B4Hx1lZGQCDg9kFgJmD2QWAgIBDw8WBh8YBQRXaWtpHxwFKS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9XaWtpHx1lZGQCEQ9kFgJmD2QWAgIBDw8WBh8YBQVMaXN0cx8cBUYvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvX2xheW91dHMvdmlld2xzdHMuYXNweD9CYXNlVHlwZT0wHx1lZGQCEg9kFgJmD2QWAgIBDw8WBh8YBQ9BY2NvbXBsaXNobWVudHMfHAVIL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0xpc3RzL0FjY29tcGxpc2htZW50cy9BbGxJdGVtcy5hc3B4Hx1lZGQCFA9kFgJmD2QWAgIBDw8WBh8YBQpHb29kIElkZWFzHxwFPi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9pZGVhcy9BbGxJdGVtcy5hc3B4Hx1lZGQCFg9kFgJmD2QWAgIBDw8WBh8YBSVBcHBsaWNhdGlvbnMgd2l0aCBQcml2YWN5IEluZm9ybWF0aW9uHxwFXi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9BcHBsaWNhdGlvbnMgd2l0aCBQcml2YWN5IEluZm9ybWF0aW9uL0FsbEl0ZW1zLmFzcHgfHWVkZAIZD2QWAmYPZBYCAgEPDxYGHxgFFFdvcmsgT3JkZXIgRGFzaGJvYXJkHxwFQi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9Xb3JrIE9yZGVycy9hY3RpdmUuYXNweB8dZWRkAhsPZBYCZg9kFgICAQ8PFgYfGAUIUGljdHVyZXMfHAVXL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL19sYXlvdXRzL3ZpZXdsc3RzLmFzcHg/QmFzZVR5cGU9MSZMaXN0VGVtcGxhdGU9MTA5Hx1lZGQCBw8PFgIfCmhkFgICAw9kFgICAw9kFgICAQ88KwAJAQAPFgIeDU5ldmVyRXhwYW5kZWRnZGQCLw9kFgICAw9kFgICAQ9kFgICAQ9kFgICAQ9kFgRmDxYGHgxGZWF0dXJlU2NvcGUFBFNpdGUeCExvY2F0aW9uBSFNaWNyb3NvZnQuU2hhcmVQb2ludC5TdGFuZGFyZE1lbnUeB0dyb3VwSWQFEFZpZXdTZWxlY3Rvck1lbnUWAgIBDxYCHwpoZAIBDw8WEh4WSG92ZXJBcnJvd0ltYWdlT2Zmc2V0WQLKAh8UAgQeFEhvdmVyQXJyb3dJbWFnZVdpZHRoAgcfFWYfFgLGAh8TAgceFUhvdmVyQXJyb3dJbWFnZUhlaWdodAIEHhZIb3ZlckFycm93SW1hZ2VPZmZzZXRYZh8SBQFXZGQYAQVHY3RsMDAkUGxhY2VIb2xkZXJUb3BOYXZCYXIkUGxhY2VIb2xkZXJIb3Jpem9udGFsTmF2JFRvcE5hdmlnYXRpb25NZW51VjQPD2QFBU1lZElUZBCXArfkGZ5RWU0r9ffbRl5VVrT8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTo1MWViOTE4NS04Y2M4LTQ5NTQtOGRjZS1kYjAzZjRlNTdhNjRkACE/XUSAIhITGyjiWBRonWxb6K8ais2B88LU1tBPTxI=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="B8ECB702" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEWCgKRwPOgCgLQn5bCCwLriLTXBQK/tuqZBQKotqKDBgLchIGUAgLchIGUAgLchIGUAgLchIGUAgKwsq+DC6whxF7UU7va/mUjFeQLFsn/FIBu" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$ctl34" Value="{{$HIDDEN1.ctl00$ctl34}}" RecordedValue="Ribbon.Library" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAj+XOkEnwkK5Pl1PBQHa0FHXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGpBbArzM4CDdmX5P6OZdx2SHlYLWBkelwvYu9m7zK5dO" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="Ribbon.Read" RecordedValue="Ribbon.Read" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="32d87492-e6b2-46bb-8287-0e00ba05e6dc" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/listform.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;Type=1&amp;IsDlg=1" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="a5e0c32b-cd5b-4e41-ad2e-4d00ed0bf65d" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/listform.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;Type=1&amp;IsDlg=1" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;ShowInGrid=HTML&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}&amp;InitialTabId=Ribbon%2ERead&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
       <ExtractionRules>
         <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractGuids, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="GUID" DisplayName="SharePoint - Extract GUID" Description="Extract SharePoint GUID from the response and place it into the test context.">
@@ -412,6 +768,21 @@
             <RuleParameter Name="ContextParameterName" Value="" />
           </RuleParameters>
         </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.SharePointExtractGUIDFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="ctl00__GUID__ctl00$toolBarTbl$RightRptControls$ctl00$ctl00$diidIOSaveItem" DisplayName="SharePoint - Extract GUID Form Field" Description="Extract the value of the form field name which contains a GUID. For example “ctl00_mg_69f4ec15_04da_449b_82ee_d6cdd46f8518_ctl00_ctl05_ctl05_ctl00_ctl00_ctl04_ctl00_ctl00_UserField”.">
+          <RuleParameters>
+            <RuleParameter Name="GuidFormFieldName" Value="ctl00$m$g_0bdeed1c_071d_4aed_a288_1df4a528fc0d$ctl00$toolBarTbl$RightRptControls$ctl00$ctl00$diidIOSaveItem" />
+            <RuleParameter Name="GenericGuidFormat" Value="False" />
+            <RuleParameter Name="Enabled" Value="True" />
+            <RuleParameter Name="FormFieldType" Value="" />
+            <RuleParameter Name="DecodeUnicodeEscapeSequences" Value="False" />
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="DefaultValue" Value="-1" />
+            <RuleParameter Name="UseDefaultValue" Value="True" />
+            <RuleParameter Name="MissingValueAsEmptyString" Value="True" />
+            <RuleParameter Name="AddCommentToResults" Value="False" />
+            <RuleParameter Name="ContextParameterName" Value="" />
+          </RuleParameters>
+        </ExtractionRule>
         <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="0" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
           <RuleParameters>
             <RuleParameter Name="Required" Value="True" />
@@ -420,44 +791,33 @@
         </ExtractionRule>
       </ExtractionRules>
       <CorrelationExtractionRules>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam17.RootFolder" DisplayName="" Description="">
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam36.RootFolder" DisplayName="" Description="">
           <RuleParameters>
-            <RuleParameter Name="StartsWith" Value="&amp;amp;RootFolder=" />
-            <RuleParameter Name="EndsWith" Value="&quot;" />
-            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="StartsWith" Value="?RootFolder=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="1" />
             <RuleParameter Name="IgnoreCase" Value="False" />
             <RuleParameter Name="UseRegularExpression" Value="False" />
             <RuleParameter Name="HtmlDecode" Value="True" />
             <RuleParameter Name="Required" Value="False" />
           </RuleParameters>
         </ExtractionRule>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam18.Type" DisplayName="" Description="">
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam37.Type" DisplayName="" Description="">
           <RuleParameters>
             <RuleParameter Name="StartsWith" Value="&amp;amp;Type=" />
             <RuleParameter Name="EndsWith" Value="&amp;" />
-            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="Index" Value="1" />
             <RuleParameter Name="IgnoreCase" Value="False" />
             <RuleParameter Name="UseRegularExpression" Value="False" />
             <RuleParameter Name="HtmlDecode" Value="True" />
             <RuleParameter Name="Required" Value="False" />
           </RuleParameters>
         </ExtractionRule>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam19.IsDlg" DisplayName="" Description="">
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam38.IsDlg" DisplayName="" Description="">
           <RuleParameters>
             <RuleParameter Name="StartsWith" Value="&amp;amp;IsDlg=" />
-            <RuleParameter Name="EndsWith" Value="&quot;" />
-            <RuleParameter Name="Index" Value="0" />
-            <RuleParameter Name="IgnoreCase" Value="False" />
-            <RuleParameter Name="UseRegularExpression" Value="False" />
-            <RuleParameter Name="HtmlDecode" Value="True" />
-            <RuleParameter Name="Required" Value="False" />
-          </RuleParameters>
-        </ExtractionRule>
-        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.ctl00$ctl34" DisplayName="" Description="">
-          <RuleParameters>
-            <RuleParameter Name="StartsWith" Value=" id=&quot;" />
-            <RuleParameter Name="EndsWith" Value="&quot; uns" />
-            <RuleParameter Name="Index" Value="71" />
+            <RuleParameter Name="EndsWith" Value=")" />
+            <RuleParameter Name="Index" Value="1" />
             <RuleParameter Name="IgnoreCase" Value="False" />
             <RuleParameter Name="UseRegularExpression" Value="False" />
             <RuleParameter Name="HtmlDecode" Value="True" />
@@ -468,21 +828,23 @@
       <QueryStringParameters>
         <QueryStringParameter Name="ListId" Value="{{ListID1}}" RecordedValue="%7B13CE2797%2D8E6C%2D4AC7%2DA17E%2DFEDE527B04C3%7D" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
         <QueryStringParameter Name="PageType" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam25.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="Type" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam26.Type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam98.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Type" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam99.Type}}" UrlEncode="False" UseToGroupResults="False" />
         <QueryStringParameter Name="IsDlg" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="POST" Guid="4eeebc8e-aab3-49ba-80bf-c9fea08ae5a8" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="51b210fc-a918-4a5b-9c00-fe1a3edd8c3e" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;Type=1&amp;IsDlg=1" />
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;Type=1&amp;IsDlg=1" />
       </Headers>
       <QueryStringParameters>
-        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam17.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="Type" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam18.Type}}" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="IsDlg" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam19.IsDlg}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam36.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="Type" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam37.Type}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="IsDlg" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam38.IsDlg}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
       <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN0._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN0.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN0.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN0.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN0.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
@@ -490,9 +852,9 @@
         <FormPostParameter Name="MSOGallery_SelectedLibrary" Value="{{$HIDDEN0.MSOGallery_SelectedLibrary}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOGallery_FilterString" Value="{{$HIDDEN0.MSOGallery_FilterString}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN0.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__EVENTTARGET" Value="ctl00$m$g_{{GUID}}$ctl00$toolBarTbl$RightRptControls$ctl00$ctl00$diidIOSaveItem" RecordedValue="ctl00$m$g_0bdeed1c_071d_4aed_a288_1df4a528fc0d$ctl00$toolBarTbl$RightRptControls$ctl00$ctl00$diidIOSaveItem" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN0.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN0.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN0.__REQUESTDIGEST}}" RecordedValue="0xA1BB221E12B1F82957733D2EB5220A6AC1C4EB6429A035E82E20CE8E512245D7827AAC3F7EEB0C55209EE1693311B1271934B8C7819507CC631DE877F910C7C4,16 Sep 2014 17:30:17 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN0.__REQUESTDIGEST}}" RecordedValue="0x39287D71573BDB30706DA7E9B4EFB42F1D3CCF713B74FA2D91E79A03FE7D71940B90632641BD14043F7E1E260077AA65339E30BB88A996A3FC1576DE982C5871,16 Sep 2014 17:43:30 -0000" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN0.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN0.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN0.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
@@ -504,37 +866,36 @@
         <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN0.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN0.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN0.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN0._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN0.__VIEWSTATE}}" RecordedValue="/wEPDwUBMA9kFgJmD2QWAgIBDxYCHgVjbGFzcwUJbXMtZGlhbG9nFgICAw9kFgwCAw9kFgIFJmdfMGJkZWVkMWNfMDcxZF80YWVkX2EyODhfMWRmNGE1MjhmYzBkD2QWAmYPZBYMAgMPZBYCAgEPZBYGAgEPFgIeB1Zpc2libGVoZAIDD2QWAmYPZBYCAgMPDxYGHgRUZXh0BQRTYXZlHg1PbkNsaWVudENsaWNrBSVpZiAoIVVwbG9hZERvY3VtZW50cygpKSByZXR1cm4gZmFsc2U7HghUYWJJbmRleAEAAGRkAgUPZBYCZg9kFgICAw8PFgYeCUFjY2Vzc0tleQUBQx8CBQZDYW5jZWwfAwUvd2luZG93LmZyYW1lRWxlbWVudC5jYW5jZWxQb3BVcCgpO3JldHVybiBmYWxzZTtkZAILD2QWAmYPZBYCAgEPZBYCZg9kFgICCQ8WAh4TUHJldmlvdXNDb250cm9sTW9kZQspiAFNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJDb250cm9scy5TUENvbnRyb2xNb2RlLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljAxYCZg8WAh8GCysEAxYCZg9kFgICAQ8PFgofBAEAAB4IQ3NzQ2xhc3MFB21zLWxvbmceB1Rvb2xUaXAFBE5hbWUeCU1heExlbmd0aAJ7HgRfIVNCAgIWAh4EU2l6ZQUCMzVkAg8PZBYCZg9kFgQCAw8WAh8GCysEARYCZg8WAh8GCysEAWQCBQ8WAh8GCysEARYCZg8WAh8GCysEAWQCEQ9kFgJmD2QWAgIDDxYCHwYLKwQDZAIVDxYCHwYLKwQDZAIZD2QWBGYPZBYCAgEPZBYCZg9kFgYCAw8WAh8GCysEARYCZg8WAh8GCysEAWQCBQ9kFgQCAQ8WAh8GCysEARYCZg8WAh8GCysEAWQCAw8WAh8GCysEARYCZg8WAh8GCysEAWQCBw9kFgQCAQ8WAh8GCysEARYCZg8WAh8GCysEAWQCAw8WAh8GCysEARYCZg8WAh8GCysEAWQCAQ9kFgQCAQ9kFgJmD2QWAgIDDw8WBh8CBQRTYXZlHwMFJWlmICghVXBsb2FkRG9jdW1lbnRzKCkpIHJldHVybiBmYWxzZTsfBAEAAGRkAgMPZBYCZg9kFgICAw8PFgYfBQUBQx8CBQZDYW5jZWwfAwUvd2luZG93LmZyYW1lRWxlbWVudC5jYW5jZWxQb3BVcCgpO3JldHVybiBmYWxzZTtkZAIRD2QWBGYPZBYEAgEPZBYCZg9kFgQCAg9kFhYCAQ8WAh8BaGQCAw8WCB4TQ2xpZW50T25DbGlja1NjcmlwdAWqAWphdmFTY3JpcHQ6Q29yZUludm9rZSgnVGFrZU9mZmxpbmVUb0NsaWVudFJlYWwnLDEsIDEsICdodHRwczpcdTAwMmZcdTAwMmZ0ZWFtcy5tZWRuZXQubWVkLnViYy5jYVx1MDAyZmRvXHUwMDJmbWVkaXRcdTAwMmZ0ZWFtc1x1MDAyZmFwcGxpY2F0aW9uX3NlcnZpY2VzJywgLTEsIC0xLCAnJywgJycpHhhDbGllbnRPbkNsaWNrTmF2aWdhdGVVcmxkHihDbGllbnRPbkNsaWNrU2NyaXB0Q29udGFpbmluZ1ByZWZpeGVkVXJsZB4MSGlkZGVuU2NyaXB0BSFUYWtlT2ZmbGluZURpc2FibGVkKDEsIDEsIC0xLCAtMSlkAgUPFgIfAWhkAgcPFgIfAWhkAgkPFgIfAWhkAgsPFgIfAWhkAg8PFgIfAWhkAhEPFgIfAWhkAhMPFgIfAWhkAhUPFgIfAWhkAhcPZBYCZg8PFgYeHFByZXZpb3VzQXV0aG9yaW5nSXRlbVZlcnNpb25lHhpQcmV2aW91c0F1dGhvcmluZ0l0ZW1Pd25lcmUeHFByZXZpb3VzQXV0aG9yaW5nQ29udHJvbE1vZGULKwQDZGQCAw8PFgofBQUBLx4PQXJyb3dJbWFnZVdpZHRoAgUeEEFycm93SW1hZ2VIZWlnaHQCAx4RQXJyb3dJbWFnZU9mZnNldFhmHhFBcnJvd0ltYWdlT2Zmc2V0WQLrA2RkAgMPZBYCAgEPZBYCAgMPZBYCAgEPPCsABQEADxYCHg9TaXRlTWFwUHJvdmlkZXIFEVNQU2l0ZU1hcFByb3ZpZGVyZGQCAQ9kFgYCAw9kFgJmD2QWAmYPFCsAA2QFLGh0dHBzOi8vbXkubWVkbmV0Lm1lZC51YmMuY2E6NDQzL1BlcnNvbi5hc3B4BSFodHRwczovL215Lm1lZG5ldC5tZWQudWJjLmNhOjQ0My9kAgUPDxYCHwFoZGQCCQ9kFgICAQ8QFgIfAWhkFCsBAGQCFw9kFgICAQ9kFgJmD2QWAgICDw9kFgYfAAUibXMtc2J0YWJsZSBtcy1zYnRhYmxlLWV4IHM0LXNlYXJjaB4LY2VsbHBhZGRpbmcFATAeC2NlbGxzcGFjaW5nBQEwZAIbD2QWAmYPDxYCHwIFKTxhIGhyZWY9Jy9kby9tZWRpdCc+VGVhbSBTaXRlIC0gTWVkSVQ8L2E+ZGQCKQ9kFgQCBQ9kFhwCAQ9kFgJmD2QWAgIBDw8WBh8CBRdSZWN1cnJpbmcgVGVhbSBNZWV0aW5ncx4LTmF2aWdhdGVVcmxlHgZUYXJnZXRlZGQCAg9kFgJmD2QWAgIBDw8WBh8CBRVBcHBsaWNhdGlvbiBTZXJ2aWNlcyAfGgU3L2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0FwcFNlcnZUZWFtTWVldGluZx8bZWRkAgQPZBYCZg9kFgICAQ8PFgYfAgUYRGF0YSBNYW5hZ2VtZW50IFNlcnZpY2VzHxoFKC9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9USU0fG2VkZAIGD2QWAmYPZBYCAgEPDxYGHwIFDFdlYiBTZXJ2aWNlcx8aBTcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvV2ViU2VydlRlYW1NZWV0aW5nHxtlZGQCCQ9kFgJmD2QWAgIBDw8WBh8CBQlMaWJyYXJpZXMfGgVGL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL19sYXlvdXRzL3ZpZXdsc3RzLmFzcHg/QmFzZVR5cGU9MR8bZWRkAgoPZBYCZg9kFgICAQ8PFgofAgUJRG9jdW1lbnRzHxoFPS9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9kb2NzL0Zvcm1zL0FsbEl0ZW1zLmFzcHgfG2UfBwUIc2VsZWN0ZWQfCgICZGQCDA9kFgJmD2QWAgIBDw8WBh8CBRVTdXBwb3J0IERvY3VtZW50YXRpb24fGgVNL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL1N1cHBvcnQgRG9jdW1lbnRhdGlvbi9Gb3Jtcy9BbGxEb2NzLmFzcHgfG2VkZAIOD2QWAmYPZBYCAgEPDxYGHwIFBFdpa2kfGgUpL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL1dpa2kfG2VkZAIRD2QWAmYPZBYCAgEPDxYGHwIFBUxpc3RzHxoFRi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9fbGF5b3V0cy92aWV3bHN0cy5hc3B4P0Jhc2VUeXBlPTAfG2VkZAISD2QWAmYPZBYCAgEPDxYGHwIFD0FjY29tcGxpc2htZW50cx8aBUgvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvTGlzdHMvQWNjb21wbGlzaG1lbnRzL0FsbEl0ZW1zLmFzcHgfG2VkZAIUD2QWAmYPZBYCAgEPDxYGHwIFCkdvb2QgSWRlYXMfGgU+L2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0xpc3RzL2lkZWFzL0FsbEl0ZW1zLmFzcHgfG2VkZAIWD2QWAmYPZBYCAgEPDxYGHwIFJUFwcGxpY2F0aW9ucyB3aXRoIFByaXZhY3kgSW5mb3JtYXRpb24fGgVeL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0xpc3RzL0FwcGxpY2F0aW9ucyB3aXRoIFByaXZhY3kgSW5mb3JtYXRpb24vQWxsSXRlbXMuYXNweB8bZWRkAhkPZBYCZg9kFgICAQ8PFgYfAgUUV29yayBPcmRlciBEYXNoYm9hcmQfGgVCL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL0xpc3RzL1dvcmsgT3JkZXJzL2FjdGl2ZS5hc3B4HxtlZGQCGw9kFgJmD2QWAgIBDw8WBh8CBQhQaWN0dXJlcx8aBVcvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvX2xheW91dHMvdmlld2xzdHMuYXNweD9CYXNlVHlwZT0xJkxpc3RUZW1wbGF0ZT0xMDkfG2VkZAIHDw8WAh8BaGQWAgIDD2QWAgIDD2QWAgIBDzwrAAkBAA8WAh4NTmV2ZXJFeHBhbmRlZGdkZAIrD2QWAgIBD2QWAgIBD2QWAgIJD2QWAgIBDw8WAh8BaGQWAgIDD2QWAgIDD2QWAgIBDzwrAAkBAA8WAh8cZ2RkGAEFR2N0bDAwJFBsYWNlSG9sZGVyVG9wTmF2QmFyJFBsYWNlSG9sZGVySG9yaXpvbnRhbE5hdiRUb3BOYXZpZ2F0aW9uTWVudVY0Dw9kBQVNZWRJVGR6J7BZ069xFT+BNy3YZJy6CTrPvQ==" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN0.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN0.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN0.__EVENTVALIDATION}}" RecordedValue="/wEWEAL3w+SXBgLQn5bCCwLriLTXBQK/tuqZBQKotqKDBgLchIGUAgLchIGUAgLchIGUAgLchIGUAgKwsq+DCwKUgvOTBgK8gpKtAgLsvvnoBALxjriSDQLs4cL0DAL25+/jD+vDu9zLQsMzxWYikV2SwIrRw1a+" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$ctl34" Value="Ribbon.DocLibListForm.Edit" RecordedValue="Ribbon.DocLibListForm.Edit" CorrelationBinding="{{FormPostParam2.ctl00$ctl34}}" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN0.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN0.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN0.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleToxNDZiMjQ3OS02Mzg1LTQ5ZjEtODE1My1jNTBlNTdkNjJhYjdkdaYNpgbUYedYYOrxoBRz4GaEm9//heVPtb4zScffR04=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN0.__VIEWSTATEGENERATOR}}" RecordedValue="B8ECB702" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN0.__EVENTVALIDATION}}" RecordedValue="/wEdAA4Ky5uLaqgsiLVLuuPdlPEwXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGrqDiFngp+WacL/FTvLyfe0vkRQ5ufmC7JmM82o4qXf2zKUZKyyZD51Nj0hjbAPgDZSzFrIhi6tsIk9wPHMo254a9lfvP5PGsKTInb0xA4uMk3ayKKeeS9SNs2gv77NgVkxFPC1H1B3v7ANPM+xDjBHb+SoJ7N0UZqiFYvjfGYai" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN0.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN0.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN0.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$m$g_{{GUID}}$ctl00$ctl04$ctl00$ctl00$ctl00$ctl04$ctl00$ctl00$onetidIOFile" Value="SP Performance test" RecordedValue="SP Performance test" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$m$g_{{GUID}}$ctl00$ctl04$ctl00$ctl00$ctl00$ctl04$ctl00$ctl00$onetidIOFile" Value="performance test" RecordedValue="performance test" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="ctl00$m$g_{{GUID}}$ctl00$ctl08$ctl00$owshiddenversion" Value="{{ctl00__GUID__ctl00$ctl08$ctl00$owshiddenversion}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$m$g_{{GUID}}$ctl00$toolBarTbl$RightRptControls$ctl00$ctl00$diidIOSaveItem" Value="{{ctl00__GUID__ctl00$toolBarTbl$RightRptControls$ctl00$ctl00$diidIOSaveItem}}" RecordedValue="Save" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="VTI-GROUP" Value="{{$HIDDEN0.VTI-GROUP}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN0._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN0.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="POST" Guid="9a836cdb-eb9b-4528-baab-32503762cec0" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="f626315f-40c5-4e06-990c-136f0f2f6e0f" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;ShowInGrid=HTML&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}&amp;InitialTabId=Ribbon%2ERead&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
       <QueryStringParameters>
-        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
         <QueryStringParameter Name="RootFolder" Value="%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010" RecordedValue="%2Fdo%2Fmedit%2Fteams%2Fapplication%5Fservices%2Fdocs%2FSharePoint%20Health%20Check%202010" CorrelationBinding="{{QueryStringParam1.RootFolder}}" UrlEncode="False" UseToGroupResults="False" />
-        <QueryStringParameter Name="ShowInGrid" Value="HTML" RecordedValue="HTML" CorrelationBinding="{{QueryStringParam2.ShowInGrid}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FolderCTID" Value="0x01200052A270E6964DE64BA0905F24630E0895" RecordedValue="0x01200052A270E6964DE64BA0905F24630E0895" CorrelationBinding="{{QueryStringParam2.FolderCTID}}" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="{1907EC4D-1213-4775-84C4-728AF6406AD2}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
         <QueryStringParameter Name="InitialTabId" Value="Ribbon%2EDocument" RecordedValue="Ribbon%2EDocument" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
         <QueryStringParameter Name="VisibilityContext" Value="WSSTabPersistence" RecordedValue="WSSTabPersistence" CorrelationBinding="{{QueryStringParam4.VisibilityContext}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
       <FormPostHttpBody>
+        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOWebPartPage_PostbackSource" Value="{{$HIDDEN1.MSOWebPartPage_PostbackSource}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOTlPn_SelectedWpId" Value="{{$HIDDEN1.MSOTlPn_SelectedWpId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOTlPn_View" Value="{{$HIDDEN1.MSOTlPn_View}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
@@ -544,7 +905,7 @@
         <FormPostParameter Name="MSOTlPn_Button" Value="{{$HIDDEN1.MSOTlPn_Button}}" RecordedValue="none" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0xDB8AB7B58CB33085D6073FBF2ADD4A82312A93F5F3301C569B53A0AE422F8BAB1648383143585798E133F829E95B9DD5757E9082AC030AAA3218B89306F593D8,16 Sep 2014 17:29:02 -0000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__REQUESTDIGEST" Value="{{$HIDDEN1.__REQUESTDIGEST}}" RecordedValue="0xFE7B86B5147B08C4DFD220C4A6B389B6555BAE7CE2F4001ED77553F182DC55909FB6EF7D58F027315D659DC368C89A4B66FED882C208689041F102341A78DF7B,16 Sep 2014 17:43:22 -0000" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_DisplayModeName" Value="{{$HIDDEN1.MSOSPWebPartManager_DisplayModeName}}" RecordedValue="Browse" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_ExitingDesignMode" Value="{{$HIDDEN1.MSOSPWebPartManager_ExitingDesignMode}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOWebPartPage_Shared" Value="{{$HIDDEN1.MSOWebPartPage_Shared}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
@@ -556,49 +917,27 @@
         <FormPostParameter Name="MSOSPWebPartManager_StartWebPartEditingName" Value="{{$HIDDEN1.MSOSPWebPartManager_StartWebPartEditingName}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="MSOSPWebPartManager_EndWebPartEditing" Value="{{$HIDDEN1.MSOSPWebPartManager_EndWebPartEditing}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="_maintainWorkspaceScrollPosition" Value="{{$HIDDEN1._maintainWorkspaceScrollPosition}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPDwUBMA9kFgJmD2QWAgIBD2QWAgIDD2QWEAIDD2QWAgUmZ18xOTA3ZWM0ZF8xMjEzXzQ3NzVfODRjNF83MjhhZjY0MDZhZDIQDxYUHgtEZXNjcmlwdGlvbgUYRGVmYXVsdCBkb2N1bWVudCBsaWJyYXJ5HglEaXJlY3Rpb24LKipTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkNvbnRlbnREaXJlY3Rpb24AHgVUaXRsZQUJRG9jdW1lbnRzHgpDaHJvbWVUeXBlZh4MX3ZpZXdDb3VudGVyAobnAR4FV2lkdGgcHhBGaWx0ZXJPcGVyYXRpb25zMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAseBkhlaWdodBweBF8hU0ICgIMIHgtQYXJhbVZhbHVlczKPCwABAAAA/////wEAAAAAAAAADAIAAABYTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwUBAAAAPU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5QYXJhbWV0ZXJOYW1lVmFsdWVIYXNodGFibGUBAAAABV9jb2xsAxxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlAgAAAAkDAAAABAMAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQcAAAAKTG9hZEZhY3RvcgdWZXJzaW9uCENvbXBhcmVyEEhhc2hDb2RlUHJvdmlkZXIISGFzaFNpemUES2V5cwZWYWx1ZXMAAAMDAAUFCwgcU3lzdGVtLkNvbGxlY3Rpb25zLklDb21wYXJlciRTeXN0ZW0uQ29sbGVjdGlvbnMuSUhhc2hDb2RlUHJvdmlkZXII7FE4Px0AAAAKChcAAAAJBAAAAAkFAAAAEAQAAAAMAAAABgYAAAATc2VsZWN0X2Rlc2VsZWN0X2FsbAYHAAAAClNlbGVjdGVkSUQGCAAAAApTaG93SW5HcmlkBgkAAAAPTm9Bbm5vdW5jZW1lbnRzBgoAAAAJb3Blbl9tZW51BgsAAAANaWRQcmVzRW5hYmxlZAYMAAAAClJvb3RGb2xkZXIGDQAAABFkdnRfc3RhcnRwb3NpdGlvbgYOAAAACkZpbHRlckxpbmsGDwAAABROb0Fubm91bmNlbWVudHNIb3dUbwYQAAAAEGR2dF9wcmV2cGFnZWRhdGEGEQAAABVPcGVuTWVudUtleUFjY2Vzc2libGUQBQAAAAwAAAAGEgAAABxTZWxlY3Qgb3IgZGVzZWxlY3QgYWxsIGl0ZW1zBhMAAAACLTEGFAAAAARIVE1MBhUAAABMVGhlcmUgYXJlIG5vIGl0ZW1zIHRvIHNob3cgaW4gdGhpcyB2aWV3IG9mIHRoZSAiRG9jdW1lbnRzIiBkb2N1bWVudCBsaWJyYXJ5LgYWAAAACU9wZW4gTWVudQYXAAAAIFByZXNlbmNlIGVuYWJsZWQgZm9yIHRoaXMgY29sdW1uBhgAAABGL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL2RvY3MvU2hhcmVQb2ludCBIZWFsdGggQ2hlY2sgMjAxMAYZAAAAAAYaAAAAdz9Sb290Rm9sZGVyPSUyRmRvJTJGbWVkaXQlMkZ0ZWFtcyUyRmFwcGxpY2F0aW9uJTVGc2VydmljZXMlMkZkb2NzJTJGU2hhcmVQb2ludCUyMEhlYWx0aCUyMENoZWNrJTIwMjAxMCZTaG93SW5HcmlkPUhUTUwmBhsAAAArVG8gYWRkIGEgbmV3IGl0ZW0sIGNsaWNrICJOZXciIG9yICJVcGxvYWQiLgYcAAAA5QFQYWdlZD1UUlVFJlBhZ2VkUHJldj1UUlVFJnBfU29ydEJlaGF2aW9yPTAmcF9GaWxlTGVhZlJlZj1NZWRJVCUyME9iamVjdGl2ZXMlMjBmb3IlMjBTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMmV4bHN4JnBfSUQ9MTY4JlJvb3RGb2xkZXI9JTJmZG8lMmZtZWRpdCUyZnRlYW1zJTJmYXBwbGljYXRpb24lNWZzZXJ2aWNlcyUyZmRvY3MlMmZTaGFyZVBvaW50JTIwSGVhbHRoJTIwQ2hlY2slMjAyMDEwBh0AAAAuVXNlIFNISUZUK0VOVEVSIHRvIG9wZW4gdGhlIG1lbnUgKG5ldyB3aW5kb3cpLgtkZGQCEQ9kFgRmD2QWBAIBD2QWAmYPZBYEAgIPZBYWAgEPFgIeB1Zpc2libGVoZAIDDxYIHhNDbGllbnRPbkNsaWNrU2NyaXB0BaoBamF2YVNjcmlwdDpDb3JlSW52b2tlKCdUYWtlT2ZmbGluZVRvQ2xpZW50UmVhbCcsMSwgMSwgJ2h0dHBzOlx1MDAyZlx1MDAyZnRlYW1zLm1lZG5ldC5tZWQudWJjLmNhXHUwMDJmZG9cdTAwMmZtZWRpdFx1MDAyZnRlYW1zXHUwMDJmYXBwbGljYXRpb25fc2VydmljZXMnLCAtMSwgLTEsICcnLCAnJykeGENsaWVudE9uQ2xpY2tOYXZpZ2F0ZVVybGQeKENsaWVudE9uQ2xpY2tTY3JpcHRDb250YWluaW5nUHJlZml4ZWRVcmxkHgxIaWRkZW5TY3JpcHQFIVRha2VPZmZsaW5lRGlzYWJsZWQoMSwgMSwgLTEsIC0xKWQCBQ8WAh8KaGQCBw8WAh8KaGQCCQ8WAh8KaGQCCw8WAh8KaGQCDw8WAh8KaGQCEQ8WAh8KaGQCEw8WAh8KaGQCFQ8WAh8KaGQCFw9kFgJmDw8WBh4cUHJldmlvdXNBdXRob3JpbmdJdGVtVmVyc2lvbmUeGlByZXZpb3VzQXV0aG9yaW5nSXRlbU93bmVyZR4cUHJldmlvdXNBdXRob3JpbmdDb250cm9sTW9kZQspiAFNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJDb250cm9scy5TUENvbnRyb2xNb2RlLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljAGRkAgMPDxYKHglBY2Nlc3NLZXkFAS8eD0Fycm93SW1hZ2VXaWR0aAIFHhBBcnJvd0ltYWdlSGVpZ2h0AgMeEUFycm93SW1hZ2VPZmZzZXRYZh4RQXJyb3dJbWFnZU9mZnNldFkC6wNkZAIDD2QWAgIBD2QWAgIDD2QWAgIBDzwrAAUBAA8WAh4PU2l0ZU1hcFByb3ZpZGVyBRFTUFNpdGVNYXBQcm92aWRlcmRkAgEPZBYGAgMPZBYCZg9kFgJmDxQrAANkBSxodHRwczovL215Lm1lZG5ldC5tZWQudWJjLmNhOjQ0My9QZXJzb24uYXNweAUhaHR0cHM6Ly9teS5tZWRuZXQubWVkLnViYy5jYTo0NDMvZAIFDw8WBB4EVGV4dAUeTGF1bmNoIHRoZSBEZXZlbG9wZXIgRGFzaGJvYXJkHwpoZGQCCQ9kFgICAQ8QFgIfCmhkFCsBAGQCFw9kFgICAQ9kFgJmD2QWAgICDw9kFgYeBWNsYXNzBSJtcy1zYnRhYmxlIG1zLXNidGFibGUtZXggczQtc2VhcmNoHgtjZWxscGFkZGluZwUBMB4LY2VsbHNwYWNpbmcFATBkAhsPZBYCZg8PFgIfGAUpPGEgaHJlZj0nL2RvL21lZGl0Jz5UZWFtIFNpdGUgLSBNZWRJVDwvYT5kZAIjD2QWAgIBDxYCHwpoZAInD2QWAgIDDw8WAh8KaGRkAikPZBYEAgUPZBYcAgEPZBYCZg9kFgICAQ8PFgYfGAUXUmVjdXJyaW5nIFRlYW0gTWVldGluZ3MeC05hdmlnYXRlVXJsZR4GVGFyZ2V0ZWRkAgIPZBYCZg9kFgICAQ8PFgYfGAUVQXBwbGljYXRpb24gU2VydmljZXMgHxwFNy9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9BcHBTZXJ2VGVhbU1lZXRpbmcfHWVkZAIED2QWAmYPZBYCAgEPDxYGHxgFGERhdGEgTWFuYWdlbWVudCBTZXJ2aWNlcx8cBSgvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvVElNHx1lZGQCBg9kFgJmD2QWAgIBDw8WBh8YBQxXZWIgU2VydmljZXMfHAU3L2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL1dlYlNlcnZUZWFtTWVldGluZx8dZWRkAgkPZBYCZg9kFgICAQ8PFgYfGAUJTGlicmFyaWVzHxwFRi9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9fbGF5b3V0cy92aWV3bHN0cy5hc3B4P0Jhc2VUeXBlPTEfHWVkZAIKD2QWAmYPZBYCAgEPDxYKHxgFCURvY3VtZW50cx8cBT0vZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvZG9jcy9Gb3Jtcy9BbGxJdGVtcy5hc3B4Hx1lHghDc3NDbGFzcwUoc2VsZWN0ZWRzZWxlY3RlZHNlbGVjdGVkc2VsZWN0ZWRzZWxlY3RlZB8IAgJkZAIMD2QWAmYPZBYCAgEPDxYGHxgFFVN1cHBvcnQgRG9jdW1lbnRhdGlvbh8cBU0vZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvU3VwcG9ydCBEb2N1bWVudGF0aW9uL0Zvcm1zL0FsbERvY3MuYXNweB8dZWRkAg4PZBYCZg9kFgICAQ8PFgYfGAUEV2lraR8cBSkvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvV2lraR8dZWRkAhEPZBYCZg9kFgICAQ8PFgYfGAUFTGlzdHMfHAVGL2RvL21lZGl0L3RlYW1zL2FwcGxpY2F0aW9uX3NlcnZpY2VzL19sYXlvdXRzL3ZpZXdsc3RzLmFzcHg/QmFzZVR5cGU9MB8dZWRkAhIPZBYCZg9kFgICAQ8PFgYfGAUPQWNjb21wbGlzaG1lbnRzHxwFSC9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9MaXN0cy9BY2NvbXBsaXNobWVudHMvQWxsSXRlbXMuYXNweB8dZWRkAhQPZBYCZg9kFgICAQ8PFgYfGAUKR29vZCBJZGVhcx8cBT4vZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvTGlzdHMvaWRlYXMvQWxsSXRlbXMuYXNweB8dZWRkAhYPZBYCZg9kFgICAQ8PFgYfGAUlQXBwbGljYXRpb25zIHdpdGggUHJpdmFjeSBJbmZvcm1hdGlvbh8cBV4vZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvTGlzdHMvQXBwbGljYXRpb25zIHdpdGggUHJpdmFjeSBJbmZvcm1hdGlvbi9BbGxJdGVtcy5hc3B4Hx1lZGQCGQ9kFgJmD2QWAgIBDw8WBh8YBRRXb3JrIE9yZGVyIERhc2hib2FyZB8cBUIvZG8vbWVkaXQvdGVhbXMvYXBwbGljYXRpb25fc2VydmljZXMvTGlzdHMvV29yayBPcmRlcnMvYWN0aXZlLmFzcHgfHWVkZAIbD2QWAmYPZBYCAgEPDxYGHxgFCFBpY3R1cmVzHxwFVy9kby9tZWRpdC90ZWFtcy9hcHBsaWNhdGlvbl9zZXJ2aWNlcy9fbGF5b3V0cy92aWV3bHN0cy5hc3B4P0Jhc2VUeXBlPTEmTGlzdFRlbXBsYXRlPTEwOR8dZWRkAgcPDxYCHwpoZBYCAgMPZBYCAgMPZBYCAgEPPCsACQEADxYCHg1OZXZlckV4cGFuZGVkZ2RkAi8PZBYCAgMPZBYCAgEPZBYCAgEPZBYCAgEPZBYEZg8WBh4MRmVhdHVyZVNjb3BlBQRTaXRlHghMb2NhdGlvbgUhTWljcm9zb2Z0LlNoYXJlUG9pbnQuU3RhbmRhcmRNZW51HgdHcm91cElkBRBWaWV3U2VsZWN0b3JNZW51FgICAQ8WAh8KaGQCAQ8PFhIeFkhvdmVyQXJyb3dJbWFnZU9mZnNldFkCygIfFAIEHhRIb3ZlckFycm93SW1hZ2VXaWR0aAIHHxVmHxYCxgIfEwIHHhVIb3ZlckFycm93SW1hZ2VIZWlnaHQCBB4WSG92ZXJBcnJvd0ltYWdlT2Zmc2V0WGYfEgUBV2RkGAEFR2N0bDAwJFBsYWNlSG9sZGVyVG9wTmF2QmFyJFBsYWNlSG9sZGVySG9yaXpvbnRhbE5hdiRUb3BOYXZpZ2F0aW9uTWVudVY0Dw9kBQVNZWRJVGRdXNRYRhpWMESLq4E6f6iCFVqDjA==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPBSpWU0tleTplOWJiNDM2Ni04OGI5LTQ2YzUtOTg5OC1lNmVhMjVlODdiZGMYAQVHY3RsMDAkUGxhY2VIb2xkZXJUb3BOYXZCYXIkUGxhY2VIb2xkZXJIb3Jpem9udGFsTmF2JFRvcE5hdmlnYXRpb25NZW51VjRkDc1snfQNVWEn7i2A2LiVd4NY4fPCZH4T52VqUoWs8ZU=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="B8ECB702" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__SCROLLPOSITIONX" Value="{{$HIDDEN1.__SCROLLPOSITIONX}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__SCROLLPOSITIONY" Value="{{$HIDDEN1.__SCROLLPOSITIONY}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEWCgKukseuBgLQn5bCCwLriLTXBQK/tuqZBQKotqKDBgLchIGUAgLchIGUAgLchIGUAgLchIGUAgKwsq+DC610F8MzLQ95tsA0DzgriwHMTQq8" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$ctl34" Value="Ribbon.Document" RecordedValue="Ribbon.Document" CorrelationBinding="{{FormPostParam1.ctl00$ctl34}}" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAhyCbEszWWPRqZfv5K2ClpQXQh0bfTqAluSc4iYy3QoFSpz16NDSkDDBl9abZ2YRPeYH+UGv8ykIvlB55k2NYqdLJUF4vG0MdmM19GRNrBTzhG1+PW7Gro65+xo1zRLaVcu9Xy6tzEWmEK2iWs0R0JwGj8YrAaPo8uPvc8vOiOoGhLoe5nFWB8G9lQ6KRm8cPNuU/AACIgq26JneMCIxqL0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ctl35" Value="Ribbon.Document" RecordedValue="Ribbon.Document" CorrelationBinding="{{FormPostParam1.ctl00$ctl35}}" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl00" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl00}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl01" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl01}}" RecordedValue="https://teams.test.mednet.med.ubc.ca/do/medit/teams/application_services/docs" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$ctl02" Value="{{$HIDDEN1.ctl00$PlaceHolderSearchArea$ctl00$ctl02}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="ctl00$PlaceHolderSearchArea$ctl00$SBScopesDDL" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="InputKeywords" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText1" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="_wpcmWpid" Value="{{$HIDDEN1._wpcmWpid}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="wpcmVal" Value="{{$HIDDEN1.wpcmVal}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="bd616283-48ce-4654-9e38-db0a3b0c7da8" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="f0d52723-3c55-4e81-876d-f9ca41e56669" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;ShowInGrid=HTML&amp;InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
+        <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}&amp;InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
     </Request>
-    <Request Method="GET" Guid="a9141f7c-d42f-4b11-821c-77ac6f2727fb" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/2013-09-11%2011_05_09-Home%20-%20Central%20Administration.png" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-      <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
-      </Headers>
-    </Request>
-    <Request Method="GET" Guid="dc987d02-be1f-4381-ae4f-961af2607bb6" Version="1.1" Url="https://teams.mednet.med.ubc.ca/favicon.ico" ThinkTime="6" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="cc1159ab-52c6-43da-a9dd-f71da459b9ac" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="Windows-1252" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-      <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;ShowInGrid=HTML&amp;InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
-      </Headers>
-    </Request>
-    <Request Method="GET" Guid="85b0f312-035f-49b6-b3dc-471a1aba7bdc" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/2013-09-11%2011_05_09-Home%20-%20Central%20Administration.png" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-      <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
-      </Headers>
-    </Request>
-    <Request Method="GET" Guid="e9207e2f-d60c-48e3-b430-d0b61bab44ac" Version="1.1" Url="https://teams.mednet.med.ubc.ca/favicon.ico" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="58886341-628d-4793-b3aa-b323439192ce" Version="1.1" Url="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="Windows-1252" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
-      <Headers>
-        <Header Name="Referer" Value="https://teams.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;ShowInGrid=HTML&amp;InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
-      </Headers>
-    </Request>
-    <SharepointInformation SharepointVersion="SharePoint2010" HeuristicXmlEnabled="False" />
+    <SharepointInformation SharepointVersion="SharePoint2013" HeuristicXmlEnabled="False" />
   </Items>
   <ContextParameters>
     <ContextParameter Name="SiteName1" Value="do" />
