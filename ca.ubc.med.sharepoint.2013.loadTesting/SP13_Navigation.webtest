@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebTest Name="SP13_Navigation" Id="e48263ed-d245-488e-8433-dffa0bc62544" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="SP13_Navigation.eb315e7a-88b3-4cb9-a390-c3e843b77d0d.rec.webtestresult" ResultsLocale="">
   <Items>
-    <Request Method="GET" Guid="60f86a73-881d-474f-869f-d72c192a2e2c" Version="1.1" Url="https://test.mednet.med.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Pages/default.aspx" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="POST" Guid="d032b030-bdcb-4d5a-9c4f-fae0be892474" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="60f86a73-881d-474f-869f-d72c192a2e2c" Version="1.1" Url="https://test.mednet.med.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Pages/default.aspx" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="POST" Guid="d032b030-bdcb-4d5a-9c4f-fae0be892474" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="soapaction" Value="http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigest" />
       </Headers>
       <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
     </Request>
-    <Request Method="POST" Guid="e7a84ad6-d13e-418c-9e2c-b9c40d69dccb" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="e7a84ad6-d13e-418c-9e2c-b9c40d69dccb" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="x-requested-with" Value="XMLHttpRequest" />
@@ -58,9 +58,9 @@
         <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="c437ec19-25b0-4353-b610-d2aee71fa87e" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="c437ec19-25b0-4353-b610-d2aee71fa87e" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
     <Comment CommentText="Navigate Through How To's" />
-    <Request Method="GET" Guid="07f69e1e-b837-4fcf-9c89-6e34852884ce" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=12&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="07f69e1e-b837-4fcf-9c89-6e34852884ce" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=12&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
       </Headers>
@@ -91,7 +91,7 @@
         <QueryStringParameter Name="Source" Value="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="9cc810cf-d031-4b6d-b3aa-993eac5c8a84" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="9cc810cf-d031-4b6d-b3aa-993eac5c8a84" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=12&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" />
       </Headers>
@@ -194,14 +194,14 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="2224c721-f7b2-46fd-9961-38f7572cd05f" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="2224c721-f7b2-46fd-9961-38f7572cd05f" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="soapaction" Value="http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigest" />
       </Headers>
       <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
     </Request>
-    <Request Method="POST" Guid="65dd410c-fe92-4abf-9028-bc55251b79fa" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="65dd410c-fe92-4abf-9028-bc55251b79fa" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="x-requested-with" Value="XMLHttpRequest" />
@@ -250,8 +250,8 @@
         <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam2.__ASYNCPOST}}" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="bc158d7a-5529-41f5-a84f-132a90a75b60" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="e8b6b223-d1ae-445d-a27c-4949e0a8daf6" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=11&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="bc158d7a-5529-41f5-a84f-132a90a75b60" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="e8b6b223-d1ae-445d-a27c-4949e0a8daf6" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=11&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
       </Headers>
@@ -266,7 +266,7 @@
         <QueryStringParameter Name="Source" Value="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="{{QueryStringParam30.Source}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="7b805083-fee1-4c7e-b8e9-495a6c42f04e" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="7b805083-fee1-4c7e-b8e9-495a6c42f04e" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=11&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" />
       </Headers>
@@ -369,14 +369,14 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="f313ae00-2bfb-49b4-8922-ac031ef9b605" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="f313ae00-2bfb-49b4-8922-ac031ef9b605" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="soapaction" Value="http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigest" />
       </Headers>
       <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
     </Request>
-    <Request Method="POST" Guid="429bfe1c-a146-453c-b5f5-362590e46144" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="429bfe1c-a146-453c-b5f5-362590e46144" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="x-requested-with" Value="XMLHttpRequest" />
@@ -425,8 +425,8 @@
         <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam4.__ASYNCPOST}}" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="0291a790-6303-4ae8-9d37-508e6c201225" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="f1b2e0f9-69fd-4c14-8dd1-2916bfc73270" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=5&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="0291a790-6303-4ae8-9d37-508e6c201225" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="f1b2e0f9-69fd-4c14-8dd1-2916bfc73270" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=5&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
       </Headers>
@@ -441,7 +441,7 @@
         <QueryStringParameter Name="Source" Value="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="{{QueryStringParam24.Source}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="7ee17af5-69d1-4abf-b221-ab39bfe3b6ab" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="7ee17af5-69d1-4abf-b221-ab39bfe3b6ab" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=5&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" />
       </Headers>
@@ -544,14 +544,14 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="cc7b2944-5b7b-4a03-9881-4fbd8d2a45f6" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="cc7b2944-5b7b-4a03-9881-4fbd8d2a45f6" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="soapaction" Value="http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigest" />
       </Headers>
       <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
     </Request>
-    <Request Method="POST" Guid="4bec1fa6-f974-4075-b776-4b5c50769f13" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="4bec1fa6-f974-4075-b776-4b5c50769f13" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="x-requested-with" Value="XMLHttpRequest" />
@@ -600,8 +600,8 @@
         <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam6.__ASYNCPOST}}" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="9a99d0c3-6fa1-4fcd-967c-7a160c038d94" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="0f1d7856-1dae-4d83-b4ba-cc2eae7c21c1" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=5&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="9a99d0c3-6fa1-4fcd-967c-7a160c038d94" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="0f1d7856-1dae-4d83-b4ba-cc2eae7c21c1" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=5&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
       </Headers>
@@ -616,7 +616,7 @@
         <QueryStringParameter Name="Source" Value="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="{{QueryStringParam18.Source}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="40e86fe7-9601-496a-a151-d0d1279f4708" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="40e86fe7-9601-496a-a151-d0d1279f4708" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=5&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" />
       </Headers>
@@ -719,14 +719,14 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="7647d27f-73fe-4076-9d96-5bc67a07d72a" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="7647d27f-73fe-4076-9d96-5bc67a07d72a" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="soapaction" Value="http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigest" />
       </Headers>
       <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
     </Request>
-    <Request Method="POST" Guid="52cde542-cfb7-4995-9822-1ab3aef0a61b" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="52cde542-cfb7-4995-9822-1ab3aef0a61b" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="x-requested-with" Value="XMLHttpRequest" />
@@ -775,8 +775,8 @@
         <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam8.__ASYNCPOST}}" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="e113a3c1-6fc7-4b8e-9f1a-d75ac6d56de2" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="128cb31e-92c9-4c51-ae8f-e6c989861d2c" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=4&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="e113a3c1-6fc7-4b8e-9f1a-d75ac6d56de2" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="128cb31e-92c9-4c51-ae8f-e6c989861d2c" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=4&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
       </Headers>
@@ -791,7 +791,7 @@
         <QueryStringParameter Name="Source" Value="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="{{QueryStringParam12.Source}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="f73cfb33-7d1a-43f8-9938-c49f2fda8c35" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="f73cfb33-7d1a-43f8-9938-c49f2fda8c35" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=4&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" />
       </Headers>
@@ -894,14 +894,14 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="2b366545-96db-430c-a137-726ec710842b" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="2b366545-96db-430c-a137-726ec710842b" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="soapaction" Value="http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigest" />
       </Headers>
       <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
     </Request>
-    <Request Method="POST" Guid="8703b1ed-30b1-47eb-b1e8-f753052cf0b3" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="8703b1ed-30b1-47eb-b1e8-f753052cf0b3" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="x-requested-with" Value="XMLHttpRequest" />
@@ -950,8 +950,8 @@
         <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam10.__ASYNCPOST}}" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="0e53802e-a36f-4307-902d-fab3353cd0b0" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="4bfe3542-b99c-4f4f-891a-402fddd62b2e" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=3&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="0e53802e-a36f-4307-902d-fab3353cd0b0" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="4bfe3542-b99c-4f4f-891a-402fddd62b2e" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/CopyUtil.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=3&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
       </Headers>
@@ -966,7 +966,7 @@
         <QueryStringParameter Name="Source" Value="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" RecordedValue="https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" CorrelationBinding="{{QueryStringParam6.Source}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="70414bf3-d086-4db9-afc6-fbab14b7ba17" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="70414bf3-d086-4db9-afc6-fbab14b7ba17" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://test.mednet.med.ubc.ca/Lists/How%20Tos/DispForm.aspx?ID=3&amp;RootFolder=%2FLists%2FHow%20Tos&amp;Source=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2FPages%2Fdefault%2Easpx" />
       </Headers>
@@ -1003,14 +1003,14 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="b2c84c53-6d5b-4510-8f77-5388ecb6907a" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="b2c84c53-6d5b-4510-8f77-5388ecb6907a" Version="1.1" Url="https://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="soapaction" Value="http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigest" />
       </Headers>
       <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
     </Request>
-    <Request Method="POST" Guid="27f50a5b-e2ea-4b9a-aff2-b947674b5ed9" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="27f50a5b-e2ea-4b9a-aff2-b947674b5ed9" Version="1.1" Url="https://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="https://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="x-requested-with" Value="XMLHttpRequest" />
@@ -1059,10 +1059,10 @@
         <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam12.__ASYNCPOST}}" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="58963234-35c2-4edf-bfb3-c3a58c56d410" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="58963234-35c2-4edf-bfb3-c3a58c56d410" Version="1.1" Url="https://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
     <Comment CommentText="Navigate - Use menu, but navigate back to default page" />
-    <Request Method="GET" Guid="3c235510-3baa-45be-bb29-85ea224e932f" Version="1.1" Url="http://test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/Lists/FoM%20Contact%20List/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="08addf41-18d5-4a7f-a32c-2c823307d984" Version="1.1" Url="http://test.mednet.med.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://test.mednet.med.ubc.ca/Pages/default.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="3c235510-3baa-45be-bb29-85ea224e932f" Version="1.1" Url="http://test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/Lists/FoM%20Contact%20List/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="08addf41-18d5-4a7f-a32c-2c823307d984" Version="1.1" Url="http://test.mednet.med.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://test.mednet.med.ubc.ca/Pages/default.aspx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="http://test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/Lists/FoM%20Contact%20List/AllItems.aspx" />
       </Headers>
@@ -1099,14 +1099,14 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="ce69348d-440c-4992-9842-8d4633b908e6" Version="1.1" Url="http://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="ce69348d-440c-4992-9842-8d4633b908e6" Version="1.1" Url="http://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="http://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="soapaction" Value="http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigest" />
       </Headers>
       <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
     </Request>
-    <Request Method="POST" Guid="dedeb241-e377-4699-bec4-6d3a8267af82" Version="1.1" Url="http://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="dedeb241-e377-4699-bec4-6d3a8267af82" Version="1.1" Url="http://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="http://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="x-requested-with" Value="XMLHttpRequest" />
@@ -1155,16 +1155,16 @@
         <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam14.__ASYNCPOST}}" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="0bfee2f6-f4dd-4ff0-9e7b-30f54f643763" Version="1.1" Url="http://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="364817da-4652-496e-a6d4-16ebdccf4875" Version="1.1" Url="http://directory.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://directory.ubc.ca/" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="0bfee2f6-f4dd-4ff0-9e7b-30f54f643763" Version="1.1" Url="http://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="364817da-4652-496e-a6d4-16ebdccf4875" Version="1.1" Url="http://directory.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://directory.ubc.ca/" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="http://test.mednet.med.ubc.ca/Pages/default.aspx" />
       </Headers>
     </Request>
-    <Request Method="GET" Guid="6069a5e8-f456-41b4-91ea-b9354ee3c2b1" Version="1.1" Url="https://directory.ubc.ca/index.cfm" ThinkTime="7" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="55c72778-e242-4265-a1c7-8e9a111f1096" Version="1.1" Url="http://med.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="6069a5e8-f456-41b4-91ea-b9354ee3c2b1" Version="1.1" Url="https://directory.ubc.ca/index.cfm" ThinkTime="7" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="55c72778-e242-4265-a1c7-8e9a111f1096" Version="1.1" Url="http://med.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <DependentRequests>
-        <Request Method="GET" Guid="64739440-3c49-455a-9123-ddb502a222a9" Version="1.1" Url="http://cdn.ubc.ca/{{SiteName4}}/7.0.4/{{SiteName5}}/{{SiteName6}}/fontawesome-webfont-ubc-v4.eot" ThinkTime="26" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+        <Request Method="GET" Guid="64739440-3c49-455a-9123-ddb502a222a9" Version="1.1" Url="http://cdn.ubc.ca/{{SiteName4}}/7.0.4/{{SiteName5}}/{{SiteName6}}/fontawesome-webfont-ubc-v4.eot" ThinkTime="26" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Referer" Value="http://med.ubc.ca/" />
           </Headers>
@@ -1178,13 +1178,13 @@
       </Headers>
     </Request>
     <Comment CommentText="Navigate - Click View All Tips (of the week)" />
-    <Request Method="GET" Guid="f7e206ca-1d12-4c94-8da5-94fbd5e73ccd" Version="1.1" Url="http://test.mednet.med.ubc.ca/Lists/Tip%20of%20the%20Week/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="f7e206ca-1d12-4c94-8da5-94fbd5e73ccd" Version="1.1" Url="http://test.mednet.med.ubc.ca/Lists/Tip%20of%20the%20Week/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="http://test.mednet.med.ubc.ca/Pages/default.aspx" />
       </Headers>
     </Request>
     <Comment CommentText="Navigate - Click 'Home' from menu" />
-    <Request Method="GET" Guid="2e5119c2-87d9-4caf-8030-d5ffe4fba2fb" Version="1.1" Url="http://test.mednet.med.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://test.mednet.med.ubc.ca/Pages/default.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="2e5119c2-87d9-4caf-8030-d5ffe4fba2fb" Version="1.1" Url="http://test.mednet.med.ubc.ca/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://test.mednet.med.ubc.ca/Pages/default.aspx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="http://test.mednet.med.ubc.ca/Lists/Tip%20of%20the%20Week/AllItems.aspx" />
       </Headers>
@@ -1221,14 +1221,14 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="40bd9ca2-03e5-4c31-8235-b93cd7f0f5d6" Version="1.1" Url="http://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="40bd9ca2-03e5-4c31-8235-b93cd7f0f5d6" Version="1.1" Url="http://test.mednet.med.ubc.ca/_vti_bin/sites.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="http://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="soapaction" Value="http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigest" />
       </Headers>
       <StringHttpBody ContentType="text/xml" InsertByteOrderMark="False">PAA/AHgAbQBsACAAdgBlAHIAcwBpAG8AbgA9ACIAMQAuADAAIgAgAGUAbgBjAG8AZABpAG4AZwA9ACIAdQB0AGYALQA4ACIAPwA+ADwAcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQAgAHgAbQBsAG4AcwA6AHgAcwBpAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEALQBpAG4AcwB0AGEAbgBjAGUAIgAgAHgAbQBsAG4AcwA6AHgAcwBkAD0AIgBoAHQAdABwADoALwAvAHcAdwB3AC4AdwAzAC4AbwByAGcALwAyADAAMAAxAC8AWABNAEwAUwBjAGgAZQBtAGEAIgAgAHgAbQBsAG4AcwA6AHMAbwBhAHAAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAHgAbQBsAHMAbwBhAHAALgBvAHIAZwAvAHMAbwBhAHAALwBlAG4AdgBlAGwAbwBwAGUALwAiAD4AIAAgADwAcwBvAGEAcAA6AEIAbwBkAHkAPgAgACAAIAAgADwARwBlAHQAVQBwAGQAYQB0AGUAZABGAG8AcgBtAEQAaQBnAGUAcwB0ACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgBtAGkAYwByAG8AcwBvAGYAdAAuAGMAbwBtAC8AcwBoAGEAcgBlAHAAbwBpAG4AdAAvAHMAbwBhAHAALwAiACAALwA+ACAAIAA8AC8AcwBvAGEAcAA6AEIAbwBkAHkAPgA8AC8AcwBvAGEAcAA6AEUAbgB2AGUAbABvAHAAZQA+AA==</StringHttpBody>
     </Request>
-    <Request Method="POST" Guid="06ad607b-2118-4b1b-beeb-5bfeae5bbdca" Version="1.1" Url="http://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="06ad607b-2118-4b1b-beeb-5bfeae5bbdca" Version="1.1" Url="http://test.mednet.med.ubc.ca/Pages/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="referer" Value="http://test.mednet.med.ubc.ca/Pages/default.aspx" />
         <Header Name="x-requested-with" Value="XMLHttpRequest" />
@@ -1277,7 +1277,7 @@
         <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam16.__ASYNCPOST}}" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="92d530a2-dfcf-44e1-b5ad-2989a16c89b5" Version="1.1" Url="http://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="92d530a2-dfcf-44e1-b5ad-2989a16c89b5" Version="1.1" Url="http://test.mednet.med.ubc.ca/_layouts/clientbin/mediaplayer.xap" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
     <SharepointInformation SharepointVersion="SharePoint2013" HeuristicXmlEnabled="False" />
   </Items>
   <ContextParameters>

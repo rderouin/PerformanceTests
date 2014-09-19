@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebTest Name="SP13_DocumentOperations" Id="76d8a122-67c7-4a43-a1d7-d6371cd47d45" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.2dd07128-1e8e-42b1-a9d7-29744baa0c24.rec.webtestresult" ResultsLocale="">
   <Items>
-    <Request Method="GET" Guid="218f1cc0-d087-4def-8095-9c320fa8fe63" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="218f1cc0-d087-4def-8095-9c320fa8fe63" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <ExtractionRules>
         <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.SharePointExtractListViewWebPartScriptValues, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="ViewID1" DisplayName="SharePoint - Extract WebParts ListView Values" Description="Extracts all values from the script portion of webpart list view in the response using the list title as the search criteria.">
           <RuleParameters>
@@ -59,7 +59,7 @@
       </RequestPlugins>
     </Request>
     <Comment CommentText="Navigate - Sharepoint Health Check 2010" />
-    <Request Method="POST" Guid="2eaf98b1-7a0e-4df8-9d5d-2061ccff15f3" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="2eaf98b1-7a0e-4df8-9d5d-2061ccff15f3" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
       </Headers>
@@ -122,7 +122,7 @@
     </Request>
     <Comment CommentText="Click 'Library' on the Library Tools menu item" />
     <Comment CommentText="Process - Open Med IT Objectives for Sharepoint health check" />
-    <Request Method="GET" Guid="d3f562b1-be6b-4d8e-91ed-a79b779cbdda" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="d3f562b1-be6b-4d8e-91ed-a79b779cbdda" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}" />
       </Headers>
@@ -177,7 +177,7 @@
         <QueryStringParameter Name="DefaultItemOpen" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam34.DefaultItemOpen}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="07a7d999-5f30-49fb-903c-d74b7c61f65b" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="07a7d999-5f30-49fb-903c-d74b7c61f65b" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx?id=/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/SharePoint%20Health%20Check%202010/MedIT%20Objectives%20for%20SharePoint%20Health%20Check.xlsx&amp;Source=https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FForms%2FAllItems%2Easpx%3FRootFolder%3D%252Fdo%252Fmedit%252Fteams%252Fapplication%255Fservices%252Fdocs%252FSharePoint%2520Health%2520Check%25202010%26FolderCTID%3D0x01200052A270E6964DE64BA0905F24630E0895%26View%3D%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;DefaultItemOpen=1" />
       </Headers>
@@ -200,7 +200,7 @@
         <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="{1907EC4D-1213-4775-84C4-728AF6406AD2}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="dd800ac7-0622-4839-8197-6a2483d111b3" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="dd800ac7-0622-4839-8197-6a2483d111b3" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}" />
       </Headers>
@@ -255,7 +255,7 @@
         <QueryStringParameter Name="DefaultItemOpen" Value="1" RecordedValue="1" CorrelationBinding="{{QueryStringParam29.DefaultItemOpen}}" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="895420be-a17d-4ae6-8792-cd5eaa1ed963" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="895420be-a17d-4ae6-8792-cd5eaa1ed963" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/xlviewer.aspx?id=/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/SharePoint%20Health%20Check%202010/MedIT%20SharePoint%20Health%20Check%20Schedule.xlsx&amp;Source=https%3A%2F%2Fteams%2Etest%2Emednet%2Emed%2Eubc%2Eca%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FForms%2FAllItems%2Easpx%3FRootFolder%3D%252Fdo%252Fmedit%252Fteams%252Fapplication%255Fservices%252Fdocs%252FSharePoint%2520Health%2520Check%25202010%26FolderCTID%3D0x01200052A270E6964DE64BA0905F24630E0895%26View%3D%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;DefaultItemOpen=1" />
       </Headers>
@@ -265,7 +265,7 @@
         <QueryStringParameter Name="View" Value="{{ViewID1_WithBraces}}" RecordedValue="{1907EC4D-1213-4775-84C4-728AF6406AD2}" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="GET" Guid="6509b860-faa4-4061-b59b-56a94cd22837" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="6509b860-faa4-4061-b59b-56a94cd22837" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}" />
       </Headers>
@@ -302,7 +302,7 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="da14964f-c13f-4309-a202-82db51f024a3" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="da14964f-c13f-4309-a202-82db51f024a3" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
       </Headers>
@@ -371,7 +371,7 @@
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="POST" Guid="27362220-c68c-4af6-ac9e-05148aef02ba" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="27362220-c68c-4af6-ac9e-05148aef02ba" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}" />
       </Headers>
@@ -464,7 +464,7 @@
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="POST" Guid="5253e1d7-f8ee-46ae-81e9-3b2de18183e6" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="5253e1d7-f8ee-46ae-81e9-3b2de18183e6" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?ShowInGrid=True&amp;View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
@@ -527,18 +527,18 @@
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="f74fa794-f88f-450a-a28f-f6eb56dfc9ee" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="f74fa794-f88f-450a-a28f-f6eb56dfc9ee" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;ShowInGrid=HTML&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
     </Request>
-    <Request Method="GET" Guid="d7db4a9b-0044-41d7-9c72-7b753338866a" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/2013-09-11%2011_05_09-Home%20-%20Central%20Administration.png" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="d7db4a9b-0044-41d7-9c72-7b753338866a" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/2013-09-11%2011_05_09-Home%20-%20Central%20Administration.png" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
       </Headers>
     </Request>
-    <Request Method="GET" Guid="9d8ec5fc-ce5e-46fb-9d7c-59278283c19b" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/favicon.ico" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="48f3a389-1ddb-4e80-972f-b8fe77dfdba1" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="Windows-1252" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="9d8ec5fc-ce5e-46fb-9d7c-59278283c19b" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/favicon.ico" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="48f3a389-1ddb-4e80-972f-b8fe77dfdba1" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="Windows-1252" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?View=%7B1907EC4D%2D1213%2D4775%2D84C4%2D728AF6406AD2%7D&amp;RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;ShowInGrid=HTML&amp;InitialTabId=Ribbon%2ELibrary&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
@@ -575,7 +575,7 @@
         </ExtractionRule>
       </CorrelationExtractionRules>
     </Request>
-    <Request Method="POST" Guid="1c1f97e4-74dd-4d50-b680-c14f887b2f32" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="1c1f97e4-74dd-4d50-b680-c14f887b2f32" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" />
       </Headers>
@@ -735,7 +735,7 @@
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="a5e0c32b-cd5b-4e41-ad2e-4d00ed0bf65d" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/listform.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;Type=1&amp;IsDlg=1" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="a5e0c32b-cd5b-4e41-ad2e-4d00ed0bf65d" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/_layouts/listform.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;Type=1&amp;IsDlg=1" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}&amp;InitialTabId=Ribbon%2ERead&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
@@ -833,7 +833,7 @@
         <QueryStringParameter Name="IsDlg" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
       </QueryStringParameters>
     </Request>
-    <Request Method="POST" Guid="51b210fc-a918-4a5b-9c00-fe1a3edd8c3e" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="51b210fc-a918-4a5b-9c00-fe1a3edd8c3e" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/Upload.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;Type=1&amp;IsDlg=1" />
       </Headers>
@@ -882,7 +882,7 @@
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="POST" Guid="f626315f-40c5-4e06-990c-136f0f2f6e0f" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="f626315f-40c5-4e06-990c-136f0f2f6e0f" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}&amp;InitialTabId=Ribbon%2ERead&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
@@ -932,7 +932,7 @@
         <FormPostParameter Name="__spText2" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
-    <Request Method="GET" Guid="f0d52723-3c55-4e81-876d-f9ca41e56669" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="f0d52723-3c55-4e81-876d-f9ca41e56669" Version="1.1" Url="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="2" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
         <Header Name="Referer" Value="https://teams.test.mednet.med.ubc.ca/{{SiteName1}}/{{SiteName2}}/{{SiteName3}}/{{SiteName4}}/{{SiteName5}}/Forms/AllItems.aspx?RootFolder=%2F{{SiteName1}}%2F{{SiteName2}}%2F{{SiteName3}}%2F{{SiteName4_URLEncoded2}}%2F{{SiteName5}}%2FSharePoint%20Health%20Check%202010&amp;FolderCTID=0x01200052A270E6964DE64BA0905F24630E0895&amp;View={1907EC4D-1213-4775-84C4-728AF6406AD2}&amp;InitialTabId=Ribbon%2EDocument&amp;VisibilityContext=WSSTabPersistence" />
       </Headers>
